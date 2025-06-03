@@ -1,0 +1,85 @@
+{
+  "block.crabsbackport.copper_door": "Copper Door",
+  "block.crabsbackport.exposed_copper_door": "Exposed Copper Door",
+  "block.crabsbackport.oxidized_copper_door": "Oxidized Copper Door",
+  "block.crabsbackport.waxed_copper_door": "Waxed Copper Door",
+  "block.crabsbackport.waxed_exposed_copper_door": "Waxed Exposed Copper Door",
+  "block.crabsbackport.waxed_oxidized_copper_door": "Waxed Oxidized Copper Door",
+  "block.crabsbackport.waxed_weathered_copper_door": "Waxed Weathered Copper Door",
+  "block.crabsbackport.weathered_copper_door": "Weathered Copper Door",
+  "block.crabsbackport.wildflowers": "Wildflowers",
+  "block.crabsbackport.leaf_litter": "Leaf Litter",
+  "block.crabsbackport.firefly_bush": "Firefly Bush",
+  "block.crabsbackport.bush": "Bush",
+  "block.crabsbackport.short_dry_grass": "Short Dry Grass",
+  "block.crabsbackport.tall_dry_grass": "Tall Dry Grass",
+  "block.crabsbackport.cactus_flower" : "Cactus Flower",
+
+  "block.crabsbackport.tuff_stairs": "Tuff Stairs",
+  "block.crabsbackport.tuff_slab": "Tuff Slab",
+  "block.crabsbackport.tuff_walls": "Tuff Wall",
+
+
+
+
+  "block.crabsbackport.chiseled_tuff": "Chiseled Tuff",
+  "block.crabsbackport.chiseled_tuff_bricks": "Chiseled Tuff Bricks",
+  "block.crabsbackport.polished_tuff": "Polished Tuff",
+  "block.crabsbackport.polished_tuff_stairs": "Polished Tuff Stairs",
+  "block.crabsbackport.polished_tuff_slab": "Polished Tuff Slab",
+  "block.crabsbackport.polished_tuff_walls": "Polished Tuff Wall",
+
+
+  "block.crabsbackport.tuff_bricks": "Chiseled Tuff Bricks",
+  "block.crabsbackport.tuff_brick_stairs": "Chiseled Tuff Brick Stairs",
+  "block.crabsbackport.tuff_brick_slab": "Chiseled Tuff Brick Slab",
+  "block.crabsbackport.tuff_brick_walls": "Chiseled Tuff Brick Wall",
+
+  "block.crabsbackport.chiseled_copper": "Chiseled Copper",
+  "block.crabsbackport.exposed_chiseled_copper": "Exposed Chiseled Copper",
+  "block.crabsbackport.weathered_chiseled_copper": "Weathered Chiseled Copper",
+  "block.crabsbackport.oxidized_chiseled_copper": "Oxidized Chiseled Copper",
+  "block.crabsbackport.waxed_chiseled_copper": "Waxed Chiseled Copper",
+  "block.crabsbackport.waxed_exposed_copper": "Waxed Exposed Chiseled Copper",
+  "block.crabsbackport.waxed_weathered_chiseled_copper": "Waxed Weathered Chiseled Copper",
+  "block.crabsbackport.waxed_oxidized_chiseled_copper": "Waxed Oxidized Chiseled Copper",
+
+  "block.crabsbackport.copper_trapdoor": "Copper Trapdoor",
+  "block.crabsbackport.exposed_copper_trapdoor": "Exposed Copper Trapdoor",
+  "block.crabsbackport.weathered_copper_trapdoor": "Weathered Copper Trapdoor",
+  "block.crabsbackport.oxidized_copper_trapdoor": "Oxidized Copper Trapdoor",
+  "block.crabsbackport.waxed_copper_trapdoor": "Waxed Copper Trapdoor",
+  "block.crabsbackport.waxed_exposed_copper_trapdoor": "Waxed Exposed Copper Trapdoor",
+  "block.crabsbackport.waxed_weathered_copper_trapdoor": "Waxed Weathered Copper Trapdoor",
+  "block.crabsbackport.waxed_oxidized_copper_trapdoor": "Waxed Oxidized Copper Trapdoor",
+
+  "block.crabsbackport.copper_grate": "Copper Grate",
+  "block.crabsbackport.exposed_copper_grate": "Exposed Copper Grate",
+  "block.crabsbackport.weathered_copper_grate": "Weathered Copper Grate",
+  "block.crabsbackport.oxidized_copper_grate": "Oxidized Copper Grate",
+  "block.crabsbackport.waxed_copper_grate": "Waxed Copper Grate",
+  "block.crabsbackport.waxed_exposed_copper_grate": "Waxed Exposed Copper Grate",
+  "block.crabsbackport.waxed_weathered_copper_grate": "Waxed Weathered Copper Grate",
+  "block.crabsbackport.waxed_oxidized_copper_grate": "Waxed Oxidized Copper Grate",
+
+  "sounds.crabsbackport.block.copper_door.open": "Door creaks",
+  "sounds.crabsbackport.block.copper_door.close": "Door creaks",
+  "sounds.crabsbackport.block.copper_trapdoor.open": "Trapdoor creaks",
+  "sounds.crabsbackport.block.copper_trapdoor.close": "Trapdoor creaks",
+  "sounds.crabsbackport.block.leaf_litter.break": "Block broken",
+  "sounds.crabsbackport.block.leaf_litter.step": "Footsteps",
+  "sounds.crabsbackport.block.leaf_litter.place": "Block placed",
+  "sounds.crabsbackport.block.leaf_litter.hit": "Block breaking",
+  "sounds.crabsbackport.block.leaf_litter.fall": "Something falls on a block",
+  "sounds.crabsbackport.block.copper_grate.break": "Block broken",
+  "sounds.crabsbackport.block.copper_grate.step": "Footsteps",
+  "sounds.crabsbackport.block.copper_grate.place": "Block placed",
+  "sounds.crabsbackport.block.copper_grate.hit": "Block breaking",
+  "sounds.crabsbackport.block.copper_grate.fall": "Something falls on a block",
+  "sounds.crabsbackport.block.cactus_flower.break": "Block broken",
+  "sounds.crabsbackport.block.cactus_flower.place": "Block placed",
+
+  "sounds.crabsbackport.firefly_bush_idle": "Fireflies buzz",
+
+  "itemgroup.crabsbackport": "Crabs Backport"
+}

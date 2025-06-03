@@ -1,0 +1,6 @@
+{
+  "parent": "crabsbackport:block/template_leaf_litter_4",
+  "textures": {
+    "texture": "crabsbackport:block/leaf_litter"
+  }
+}

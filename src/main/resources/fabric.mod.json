@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "crabsbackport",
+	"version": "${version}",
+	"name": "Crab's Backport",
+	"description": "This mod Backports a whole bunch of blocks from the 1.21 update and snapshots!",
+	"authors": [
+		"Crabbiernote"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/crabsbackport/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"crab.backport.CrabsBackport"
+		],
+		"fabric-datagen": [
+			"crab.backport.CrabsBackportDataGenerator"
+		],
+		"client": ["crab.backport.CrabsBackportClient"]
+	},
+	"mixins": [
+		"crabsbackport.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.8",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

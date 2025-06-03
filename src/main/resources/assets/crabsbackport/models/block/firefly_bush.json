@@ -1,0 +1,7 @@
+{
+  "parent": "crabsbackport:block/cross_emissive",
+  "textures": {
+    "cross": "crabsbackport:block/firefly_bush",
+    "cross_emissive": "crabsbackport:block/firefly_bush_emissive"
+  }
+}

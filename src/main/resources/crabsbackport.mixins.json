@@ -1,0 +1,18 @@
+{
+  "required": true,
+  "package": "crab.backport.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "CactusFlowerMixin",
+    "ExampleMixin",
+    "MerchantEntityMixin",
+    "WanderingTraderEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "BeaconBlockEntityRendererMixin",
+    "WorldRendererMixin"
+  ]
+}

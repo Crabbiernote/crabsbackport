@@ -1,0 +1,186 @@
+{
+  "firefly_bush_idle": {
+    "subtitle": "sounds.crabsbackport.firefly_bush_idle",
+    "sounds": [
+      "crabsbackport:firefly_bush_idle_1",
+      "crabsbackport:firefly_bush_idle_2",
+      "crabsbackport:firefly_bush_idle_3",
+      "crabsbackport:firefly_bush_idle_4",
+      "crabsbackport:firefly_bush_idle_5",
+      "crabsbackport:firefly_bush_idle_6",
+      "crabsbackport:firefly_bush_idle_7",
+      "crabsbackport:firefly_bush_idle_8",
+      "crabsbackport:firefly_bush_idle_9",
+      "crabsbackport:firefly_bush_idle_10",
+      "crabsbackport:firefly_bush_idle_11"
+      ]
+  },
+  "block.leaf_litter.break": {
+    "subtitle": "sounds.crabsbackport.block.leaf_litter.break",
+    "sounds": [
+      "crabsbackport:leaf_litter_break_1",
+      "crabsbackport:leaf_litter_break_2",
+      "crabsbackport:leaf_litter_break_3",
+      "crabsbackport:leaf_litter_break_4",
+      "crabsbackport:leaf_litter_break_5"
+      ]
+  },
+  "block.leaf_litter.step": {
+    "subtitle": "sounds.crabsbackport.block.leaf_litter.step",
+    "sounds": [
+      "crabsbackport:leaf_litter_step_1",
+      "crabsbackport:leaf_litter_step_2",
+      "crabsbackport:leaf_litter_step_3",
+      "crabsbackport:leaf_litter_step_4",
+      "crabsbackport:leaf_litter_step_5",
+      "crabsbackport:leaf_litter_step_6"
+
+
+      ]
+  },
+  "block.leaf_litter.place": {
+    "subtitle": "sounds.crabsbackport.block.leaf_litter.place",
+    "sounds": [
+      "crabsbackport:leaf_litter_place_1",
+      "crabsbackport:leaf_litter_place_2",
+      "crabsbackport:leaf_litter_place_3",
+      "crabsbackport:leaf_litter_place_4",
+      "crabsbackport:leaf_litter_place_5"
+      ]
+  },
+  "block.leaf_litter.hit": {
+    "subtitle": "sounds.crabsbackport.block.leaf_litter.hit",
+    "sounds": [
+      "crabsbackport:leaf_litter_step_1",
+      "crabsbackport:leaf_litter_step_2",
+      "crabsbackport:leaf_litter_step_3",
+      "crabsbackport:leaf_litter_step_4",
+      "crabsbackport:leaf_litter_step_5",
+      "crabsbackport:leaf_litter_step_6"
+      ]
+  },
+  "block.leaf_litter.fall": {
+    "subtitle": "sounds.crabsbackport.block.leaf_litter.fall",
+    "sounds": [
+      "crabsbackport:leaf_litter_step_1",
+      "crabsbackport:leaf_litter_step_2",
+      "crabsbackport:leaf_litter_step_3",
+      "crabsbackport:leaf_litter_step_4",
+      "crabsbackport:leaf_litter_step_5",
+      "crabsbackport:leaf_litter_step_6"
+      ]
+  },
+  "block.copper_door.open": {
+    "subtitle": "sounds.crabsbackport.block.copper_door.open",
+    "sounds": [
+      "crabsbackport:copper_door_toggle_1",
+      "crabsbackport:copper_door_toggle_2",
+      "crabsbackport:copper_door_toggle_3",
+      "crabsbackport:copper_door_toggle_4",
+      "crabsbackport:copper_door_toggle_5"
+      ]
+  },
+  "block.cactus_flower.break": {
+    "subtitle": "sounds.crabsbackport.block.cactus_flower.break",
+    "sounds": [
+      "crabsbackport:cactus_flower_break1",
+      "crabsbackport:cactus_flower_break2",
+      "crabsbackport:cactus_flower_break3",
+      "crabsbackport:cactus_flower_break4",
+      "crabsbackport:cactus_flower_break5"
+    ]
+  },
+  "block.cactus_flower.place": {
+    "subtitle": "sounds.crabsbackport.block.cactus_flower.place",
+    "sounds": [
+      "crabsbackport:cactus_flower_place1",
+      "crabsbackport:cactus_flower_place2",
+      "crabsbackport:cactus_flower_place3",
+      "crabsbackport:cactus_flower_place4"
+    ]
+  },
+  "block.copper_door.close": {
+    "subtitle": "sounds.crabsbackport.block.copper_door.close",
+    "sounds": [
+      "crabsbackport:copper_door_toggle_1",
+      "crabsbackport:copper_door_toggle_2",
+      "crabsbackport:copper_door_toggle_3",
+      "crabsbackport:copper_door_toggle_4",
+      "crabsbackport:copper_door_toggle_5"
+      ]
+
+  },
+  "block.copper_trapdoor.open": {
+    "subtitle": "sounds.crabsbackport.block.copper_trapdoor.open",
+    "sounds": [
+      "crabsbackport:copper_trapdoor_toggle_1",
+      "crabsbackport:copper_trapdoor_toggle_2",
+      "crabsbackport:copper_trapdoor_toggle_3",
+      "crabsbackport:copper_trapdoor_toggle_4"
+
+      ]
+
+  },
+  "block.copper_trapdoor.close": {
+    "subtitle": "sounds.crabsbackport.block.copper_trapdoor.open",
+    "sounds": [
+      "crabsbackport:copper_trapdoor_toggle_1",
+      "crabsbackport:copper_trapdoor_toggle_2",
+      "crabsbackport:copper_trapdoor_toggle_3",
+      "crabsbackport:copper_trapdoor_toggle_4"
+
+    ]
+
+  },
+  "block.copper_grate.break": {
+    "subtitle": "sounds.crabsbackport.block.copper_grate.break",
+    "sounds": [
+      "crabsbackport:copper_grate_break_1",
+      "crabsbackport:copper_grate_break_2",
+      "crabsbackport:copper_grate_break_3",
+      "crabsbackport:copper_grate_break_4"
+      ]
+  },
+  "block.copper_grate.step": {
+    "subtitle": "sounds.crabsbackport.block.copper_grate.step",
+    "sounds": [
+      "crabsbackport:copper_grate_step_1",
+      "crabsbackport:copper_grate_step_2",
+      "crabsbackport:copper_grate_step_3",
+      "crabsbackport:copper_grate_step_4",
+      "crabsbackport:copper_grate_step_5",
+      "crabsbackport:copper_grate_step_6"
+      ]
+  },
+  "block.copper_grate.place": {
+    "subtitle": "sounds.crabsbackport.block.copper_grate.place",
+    "sounds": [
+      "crabsbackport:copper_grate_break_1",
+      "crabsbackport:copper_grate_break_2",
+      "crabsbackport:copper_grate_break_3",
+      "crabsbackport:copper_grate_break_4"
+      ]
+  },
+  "block.copper_grate.fall": {
+    "subtitle": "sounds.crabsbackport.block.copper_grate.step",
+    "sounds": [
+      "crabsbackport:copper_grate_step_1",
+      "crabsbackport:copper_grate_step_2",
+      "crabsbackport:copper_grate_step_3",
+      "crabsbackport:copper_grate_step_4",
+      "crabsbackport:copper_grate_step_5",
+      "crabsbackport:copper_grate_step_6"
+    ]
+  },
+  "block.copper_grate.hit": {
+    "subtitle": "sounds.crabsbackport.block.copper_grate.step",
+    "sounds": [
+      "crabsbackport:copper_grate_step_1",
+      "crabsbackport:copper_grate_step_2",
+      "crabsbackport:copper_grate_step_3",
+      "crabsbackport:copper_grate_step_4",
+      "crabsbackport:copper_grate_step_5",
+      "crabsbackport:copper_grate_step_6"
+    ]
+  }
+}

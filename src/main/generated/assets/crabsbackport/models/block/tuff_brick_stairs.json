@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "crabsbackport:block/tuff_bricks",
+    "side": "crabsbackport:block/tuff_bricks",
+    "top": "crabsbackport:block/tuff_bricks"
+  }
+}
