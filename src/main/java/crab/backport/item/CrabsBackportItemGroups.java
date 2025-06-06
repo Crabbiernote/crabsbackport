@@ -21,6 +21,7 @@ public static final ItemGroup CRABS_BACKPORT_GROUP = Registry.register(Registrie
                     entries.add(CrabsBackportBlocks.SHORT_DRY_GRASS);
                     entries.add(CrabsBackportBlocks.TALL_DRY_GRASS);
                     entries.add(CrabsBackportBlocks.LEAF_LITTER);
+                    entries.add(CrabsBackportBlocks.CACTUS_FLOWER);
 
                     entries.add(CrabsBackportBlocks.TUFF_BRICKS);
                     entries.add(CrabsBackportBlocks.TUFF_BRICK_WALLS);

@@ -23,7 +23,7 @@ public class CrabsBackportItems {
         entries.add(CrabsBackportBlocks.SHORT_DRY_GRASS);
         entries.add(CrabsBackportBlocks.TALL_DRY_GRASS);
         entries.add(CrabsBackportBlocks.LEAF_LITTER);
-
+        entries.add(CrabsBackportBlocks.CACTUS_FLOWER);
     }
     public static void addItemsToBuildingBlocksGroup(FabricItemGroupEntries entries) {
         entries.add(CrabsBackportBlocks.TUFF_BRICKS);

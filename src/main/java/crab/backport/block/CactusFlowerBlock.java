@@ -7,7 +7,7 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 
 public class CactusFlowerBlock extends PlantBlock {
-    private static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 14.0, 12.0, 14.0);
+    private static final VoxelShape SHAPE = Block.createCuboidShape(1.0, 0.0, 1.0, 15.0, 12.0, 15.0);
     public CactusFlowerBlock(Settings settings) {
         super(settings);
     }

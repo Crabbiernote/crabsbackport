@@ -26,16 +26,18 @@ public class CrabsbackportVegetationGeneration {
         BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.BADLANDS, BiomeKeys.ERODED_BADLANDS, BiomeKeys.WOODED_BADLANDS),
                 GenerationStep.Feature.VEGETAL_DECORATION, CrabsbackportPlacedFeatures.DRY_GRASS_BADLANDS);
 
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST,BiomeKeys.FLOWER_FOREST, BiomeKeys.BIRCH_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST, BiomeKeys.DARK_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, CrabsbackportPlacedFeatures.FALLEN_BIRCH_TREE);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_BIRCH_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, CrabsbackportPlacedFeatures.FALLEN_SUPER_BIRCH_TREE);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST, BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS, BiomeKeys.SWAMP, BiomeKeys.WINDSWEPT_FOREST, BiomeKeys.WINDSWEPT_SAVANNA, BiomeKeys.WOODED_BADLANDS, BiomeKeys.DARK_FOREST),
-                GenerationStep.Feature.VEGETAL_DECORATION, CrabsbackportPlacedFeatures.FALLEN_OAK_TREE);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.TAIGA, BiomeKeys.WINDSWEPT_HILLS, BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA, BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.SNOWY_TAIGA, BiomeKeys.WINDSWEPT_FOREST, BiomeKeys.SNOWY_PLAINS),
-                GenerationStep.Feature.VEGETAL_DECORATION, CrabsbackportPlacedFeatures.FALLEN_SPRUCE_TREE);
-        BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE, BiomeKeys.SPARSE_JUNGLE),
-                GenerationStep.Feature.VEGETAL_DECORATION, CrabsbackportPlacedFeatures.FALLEN_JUNGLE_TREE);
+    //    BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST,BiomeKeys.FLOWER_FOREST, BiomeKeys.BIRCH_FOREST, BiomeKeys.OLD_GROWTH_BIRCH_FOREST, BiomeKeys.DARK_FOREST),
+    //            GenerationStep.Feature.VEGETAL_DECORATION, CrabsbackportPlacedFeatures.FALLEN_BIRCH_TREE);
+    //    BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.OLD_GROWTH_BIRCH_FOREST),
+    //            GenerationStep.Feature.VEGETAL_DECORATION, CrabsbackportPlacedFeatures.FALLEN_SUPER_BIRCH_TREE);
+    //    BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.FOREST, BiomeKeys.PLAINS, BiomeKeys.SUNFLOWER_PLAINS, BiomeKeys.SWAMP, BiomeKeys.WINDSWEPT_FOREST, BiomeKeys.WINDSWEPT_SAVANNA, BiomeKeys.WOODED_BADLANDS, BiomeKeys.DARK_FOREST),
+    //            GenerationStep.Feature.VEGETAL_DECORATION, CrabsbackportPlacedFeatures.FALLEN_OAK_TREE);
+    //    BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.TAIGA, BiomeKeys.WINDSWEPT_HILLS, BiomeKeys.OLD_GROWTH_SPRUCE_TAIGA, BiomeKeys.OLD_GROWTH_PINE_TAIGA, BiomeKeys.SNOWY_TAIGA, BiomeKeys.WINDSWEPT_FOREST, BiomeKeys.SNOWY_PLAINS),
+    //            GenerationStep.Feature.VEGETAL_DECORATION, CrabsbackportPlacedFeatures.FALLEN_SPRUCE_TREE);
+    //    BiomeModifications.addFeature(BiomeSelectors.includeByKey(BiomeKeys.JUNGLE, BiomeKeys.SPARSE_JUNGLE),
+    //            GenerationStep.Feature.VEGETAL_DECORATION, CrabsbackportPlacedFeatures.FALLEN_JUNGLE_TREE);
+
+        // I'll fix this later i just really cant be bothered to do it rn
 
 
 
