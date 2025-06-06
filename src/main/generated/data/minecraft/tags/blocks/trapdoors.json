@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "crabsbackport:copper_trapdoor",
+    "crabsbackport:waxed_copper_trapdoor",
+    "crabsbackport:exposed_copper_trapdoor",
+    "crabsbackport:waxed_exposed_copper_trapdoor",
+    "crabsbackport:oxidized_copper_trapdoor",
+    "crabsbackport:waxed_oxidized_copper_trapdoor",
+    "crabsbackport:weathered_copper_trapdoor",
+    "crabsbackport:waxed_weathered_copper_trapdoor"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "waxed_copper_item",
+  "ingredients": [
+    {
+      "item": "crabsbackport:exposed_copper_door"
+    },
+    {
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "result": {
+    "item": "crabsbackport:waxed_exposed_copper_door"
+  }
+}

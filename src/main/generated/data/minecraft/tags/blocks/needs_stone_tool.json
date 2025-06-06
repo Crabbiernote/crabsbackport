@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "crabsbackport:chiseled_copper",
+    "crabsbackport:weathered_chiseled_copper",
+    "crabsbackport:exposed_chiseled_copper",
+    "crabsbackport:oxidized_chiseled_copper",
+    "crabsbackport:waxed_chiseled_copper",
+    "crabsbackport:waxed_exposed_chiseled_copper",
+    "crabsbackport:waxed_oxidized_chiseled_copper",
+    "crabsbackport:waxed_weathered_chiseled_copper",
+    "crabsbackport:copper_trapdoor",
+    "crabsbackport:waxed_copper_trapdoor",
+    "crabsbackport:exposed_copper_trapdoor",
+    "crabsbackport:waxed_exposed_copper_trapdoor",
+    "crabsbackport:oxidized_copper_trapdoor",
+    "crabsbackport:waxed_oxidized_copper_trapdoor",
+    "crabsbackport:weathered_copper_trapdoor",
+    "crabsbackport:waxed_weathered_copper_trapdoor",
+    "crabsbackport:copper_grate",
+    "crabsbackport:waxed_copper_grate",
+    "crabsbackport:exposed_copper_grate",
+    "crabsbackport:waxed_exposed_copper_grate",
+    "crabsbackport:oxidized_copper_grate",
+    "crabsbackport:waxed_oxidized_copper_grate",
+    "crabsbackport:weathered_copper_grate",
+    "crabsbackport:waxed_weathered_copper_grate"
+  ]
+}

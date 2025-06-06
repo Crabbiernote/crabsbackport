@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "crabsbackport:short_dry_grass",
+    "crabsbackport:tall_dry_grass",
+    "crabsbackport:bush",
+    "crabsbackport:firefly_bush"
+  ]
+}

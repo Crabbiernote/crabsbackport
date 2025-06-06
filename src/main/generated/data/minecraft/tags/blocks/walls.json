@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "crabsbackport:tuff_walls",
+    "crabsbackport:tuff_brick_walls",
+    "crabsbackport:polished_tuff_walls"
+  ]
+}

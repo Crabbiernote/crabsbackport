@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "waxed_copper_item",
+  "ingredients": [
+    {
+      "item": "crabsbackport:copper_grate"
+    },
+    {
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "result": {
+    "item": "crabsbackport:waxed_copper_grate"
+  }
+}

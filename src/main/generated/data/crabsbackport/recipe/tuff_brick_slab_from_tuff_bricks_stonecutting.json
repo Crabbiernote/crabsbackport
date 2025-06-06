@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "crabsbackport:tuff_bricks"
+  },
+  "result": "crabsbackport:tuff_brick_slab"
+}
