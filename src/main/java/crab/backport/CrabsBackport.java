@@ -2,6 +2,7 @@ package crab.backport;
 
 import crab.backport.block.CrabsBackportBlocks;
 import crab.backport.block.OxidizableBlockRegistryistoolong;
+import crab.backport.entity.PaintingVarientRegistry;
 import crab.backport.entity.WanderingTraderTrades;
 import crab.backport.item.CrabsBackportItemGroups;
 import crab.backport.item.CrabsBackportItems;
@@ -51,6 +52,7 @@ public class CrabsBackport implements ModInitializer {
 		OxidizableBlockRegistryistoolong.registerBlocks();
 		WanderingTraderTrades.registerTrades();
 		LootTableEditing.editLootTables();
+		PaintingVarientRegistry.registerPaintingVariants();
 
 
 	}
