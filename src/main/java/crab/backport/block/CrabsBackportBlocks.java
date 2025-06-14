@@ -5,7 +5,10 @@ import crab.backport.sound.CrabsBackportSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.datafixer.TypeReferences;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -13,6 +16,9 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Util;
+
+import java.util.Set;
 
 public class CrabsBackportBlocks {
     public static final BlockSetType COPPER = new BlockSetType(
@@ -176,10 +182,6 @@ public class CrabsBackportBlocks {
     new GrateBlock(FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER).sounds(CrabsBackportSounds.COPPER_GRATE).nonOpaque()));
     public static final Block WAXED_OXIDIZED_COPPER_GRATE = registerBlock("waxed_oxidized_copper_grate",
     new GrateBlock(FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER).sounds(CrabsBackportSounds.COPPER_GRATE).nonOpaque()));
-
-
-
-
 
     private static Block registerBlock(String name, Block block){
         registerBlockItems(name, block);

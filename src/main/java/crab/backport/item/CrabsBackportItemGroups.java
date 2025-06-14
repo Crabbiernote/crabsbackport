@@ -14,7 +14,8 @@ public class CrabsBackportItemGroups {
 public static final ItemGroup CRABS_BACKPORT_GROUP = Registry.register(Registries.ITEM_GROUP,
         new Identifier(CrabsBackport.MOD_ID, "crabs_backport"),
         FabricItemGroup.builder().displayName(Text.translatable("itemgroup.crabsbackport"))
-                .icon(() -> new ItemStack(CrabsBackportBlocks.CHISELED_COPPER.asItem())).entries((displayContext, entries) -> {
+                .icon(() -> new ItemStack(CrabsBackportBlocks.CHISELED_COPPER.asItem()))
+                .entries((displayContext, entries) -> {
                     entries.add(CrabsBackportBlocks.WILDFLOWERS);
                     entries.add(CrabsBackportBlocks.FIREFLY_BUSH);
                     entries.add(CrabsBackportBlocks.BUSH);
