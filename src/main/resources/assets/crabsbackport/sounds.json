@@ -182,5 +182,150 @@
       "crabsbackport:copper_grate_step_5",
       "crabsbackport:copper_grate_step_6"
     ]
-  }
+  },
+  "block.shelf.activate": {
+    "subtitle": "sounds.crabsbackport.block.shelf.activate",
+    "sounds": [
+      "crabsbackport:shelf_activate_1",
+      "crabsbackport:shelf_activate_2",
+      "crabsbackport:shelf_activate_3"
+    ]
+  },
+  "block.shelf.deactivate": {
+    "subtitle": "sounds.crabsbackport.block.shelf.deactivate",
+    "sounds": [
+      "crabsbackport:shelf_deactivate_1",
+      "crabsbackport:shelf_deactivate_2",
+      "crabsbackport:shelf_deactivate_3"
+    ]
+  },
+  "block.shelf.place_item": {
+    "subtitle": "sounds.crabsbackport.block.shelf.place_item",
+    "sounds": [
+      "crabsbackport:shelf_place_item_1",
+      "crabsbackport:shelf_place_item_2",
+      "crabsbackport:shelf_place_item_3",
+      "crabsbackport:shelf_place_item_4"
+    ]
+  },
+  "block.shelf.multi_swap": {
+    "subtitle": "sounds.crabsbackport.block.shelf.multi_swap",
+    "sounds": [
+      "crabsbackport:shelf_multi_swap_1",
+      "crabsbackport:shelf_multi_swap_2",
+      "crabsbackport:shelf_multi_swap_3"
+    ]
+  },
+  "block.shelf.single_swap": {
+    "subtitle": "sounds.crabsbackport.block.shelf.single_swap",
+    "sounds": [
+      "crabsbackport:shelf_single_swap_1",
+      "crabsbackport:shelf_single_swap_2",
+      "crabsbackport:shelf_single_swap_3",
+      "crabsbackport:shelf_single_swap_4"
+    ]
+  },
+  "music_disc.lava_chicken": {
+    "sounds": [
+      {
+        "name": "crabsbackport:lava_chicken",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.tears": {
+    "sounds": [
+      {
+        "name": "crabsbackport:tears",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.precipice": {
+    "sounds": [
+      {
+        "name": "crabsbackport:precipice",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.creator": {
+    "sounds": [
+      {
+        "name": "crabsbackport:creator",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.creator_music_box": {
+    "sounds": [
+      {
+        "name": "crabsbackport:creator_music_box",
+        "stream": true
+      }
+    ]
+  },
+  "block.copper_bulb.break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "crabsbackport:copper_bulb_break_1",
+      "crabsbackport:copper_bulb_break_2",
+      "crabsbackport:copper_bulb_break_3",
+      "crabsbackport:copper_bulb_break_4"
+    ]
+  },
+    "block.copper_bulb.step": {
+        "subtitle": "subtitles.block.generic.footsteps",
+        "sounds": [
+        "crabsbackport:copper_bulb_step_1",
+        "crabsbackport:copper_bulb_step_2",
+        "crabsbackport:copper_bulb_step_3",
+        "crabsbackport:copper_bulb_step_4",
+        "crabsbackport:copper_bulb_step_5",
+        "crabsbackport:copper_bulb_step_6"
+        ]
+    },
+  "block.copper_bulb.fall": {
+    "subtitle": "subtitles.block.generic.fall",
+    "sounds": [
+      "crabsbackport:copper_bulb_step_1",
+      "crabsbackport:copper_bulb_step_2",
+      "crabsbackport:copper_bulb_step_3",
+      "crabsbackport:copper_bulb_step_4",
+      "crabsbackport:copper_bulb_step_5",
+      "crabsbackport:copper_bulb_step_6"
+    ]
+  },
+  "block.copper_bulb.hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      "crabsbackport:copper_bulb_step_1",
+      "crabsbackport:copper_bulb_step_2",
+      "crabsbackport:copper_bulb_step_3",
+      "crabsbackport:copper_bulb_step_4",
+      "crabsbackport:copper_bulb_step_5",
+      "crabsbackport:copper_bulb_step_6"
+    ]
+  },
+    "block.copper_bulb.place": {
+        "subtitle": "subtitles.block.generic.place",
+        "sounds": [
+        "crabsbackport:copper_bulb_place_1",
+        "crabsbackport:copper_bulb_place_2",
+        "crabsbackport:copper_bulb_place_3",
+        "crabsbackport:copper_bulb_place_4"
+        ]
+    },
+  "block.copper_bulb.turn_on": {
+    "subtitle": "sounds.crabsbackport.block.copper_bulb.turn_on",
+    "sounds": [
+      "crabsbackport:copper_bulb_turn_on"
+    ]
+  },
+    "block.copper_bulb.turn_off": {
+        "subtitle": "sounds.crabsbackport.block.copper_bulb.turn_off",
+        "sounds": [
+        "crabsbackport:copper_bulb_turn_off"
+        ]
+    }
 }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "waxed_copper_item",
+  "ingredients": [
+    {
+      "item": "crabsbackport:weathered_copper_bulb"
+    },
+    {
+      "item": "minecraft:honeycomb"
+    }
+  ],
+  "result": {
+    "item": "crabsbackport:waxed_weathered_copper_bulb"
+  }
+}

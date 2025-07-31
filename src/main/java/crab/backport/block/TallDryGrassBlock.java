@@ -19,8 +19,9 @@ public class TallDryGrassBlock extends PlantBlock implements Fertilizable {
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        return floor.isIn(CrabsBackportTags.Blocks.DRY_VEGETATION_MAY_PLACE_ON) || floor.isOf(Blocks.FARMLAND );
+        return floor.isIn(CrabsBackportTags.Blocks.DRY_VEGETATION_MAY_PLACE_ON) || floor.isOf(Blocks.FARMLAND);
     }
+
     @Override
     public boolean isFertilizable(WorldView world, BlockPos pos, BlockState state, boolean isClient) {
         return BushBlock.canSpread(world, pos, CrabsBackportBlocks.SHORT_DRY_GRASS.getDefaultState());

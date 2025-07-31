@@ -62,7 +62,6 @@ public class CrabsBackportModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.WAXED_WEATHERED_COPPER_GRATE);
 
 
-
     }
 
     @Override

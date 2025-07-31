@@ -8,14 +8,14 @@ import net.minecraft.registry.RegistryBuilder;
 
 
 public class CrabsBackportDataGenerator implements DataGeneratorEntrypoint {
-	@Override
-	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
-		FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
+    @Override
+    public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
+        FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
+        pack.addProvider(CrabsBackportItemTagProvider::new);
 
+    }
 
-	}
-
-	@Override
-	public void buildRegistry(RegistryBuilder registryBuilder) {
-	}
+    @Override
+    public void buildRegistry(RegistryBuilder registryBuilder) {
+    }
 }

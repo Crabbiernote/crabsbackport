@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:oxidized_copper"
+    },
+    "D": {
+      "tag": "minecraft:music_discs"
+    }
+  },
+  "pattern": [
+    "###",
+    "#D#",
+    "###"
+  ],
+  "result": {
+    "item": "crabsbackport:music_disc_creator"
+  },
+  "show_notification": true
+}

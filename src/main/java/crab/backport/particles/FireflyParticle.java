@@ -14,6 +14,7 @@ public class FireflyParticle extends SpriteBillboardParticle {
     private static final float field_56501 = 0.3F;
     private static final int MIN_MAX_AGE = 36;
     private static final int MAX_MAX_AGE = 180;
+
     protected FireflyParticle(ClientWorld clientWorld, double d, double e, double f, double g, double h, double i) {
         super(clientWorld, d, e, f, g, h, i);
         this.ascending = true;
@@ -23,23 +24,26 @@ public class FireflyParticle extends SpriteBillboardParticle {
         this.velocityX *= 0.8F;
         this.velocityZ *= 0.8F;
     }
+
     @Override
     public ParticleTextureSheet getType() {
         return ParticleTextureSheet.PARTICLE_SHEET_TRANSLUCENT;
     }
+
     @Override
     public int getBrightness(float tint) {
-        float f = MathHelper.clamp(((float)this.age + tint) / (float)this.maxAge, 0.0F, 1.0F);
+        float f = MathHelper.clamp(((float) this.age + tint) / (float) this.maxAge, 0.0F, 1.0F);
         if (f > 0.5F) {
             float g = (1.0F - f) / 0.5F;
-            return (int)(255.0F * g);
+            return (int) (255.0F * g);
         } else if (f < 0.3F) {
             float g = f / 0.3F;
-            return (int)(255.0F * g);
+            return (int) (255.0F * g);
         } else {
             return 255;
         }
     }
+
     @Override
     public void tick() {
         super.tick();
@@ -51,6 +55,7 @@ public class FireflyParticle extends SpriteBillboardParticle {
             }
         }
     }
+
     @Environment(EnvType.CLIENT)
     public static class FireflyFactory implements ParticleFactory<DefaultParticleType> {
         private final SpriteProvider spriteProvider;

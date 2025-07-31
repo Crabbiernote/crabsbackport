@@ -85,19 +85,19 @@ public class CrabsBackportBlockTagProvider extends FabricTagProvider.BlockTagPro
         );
         getOrCreateTagBuilder(BlockTags.WALLS).add(
                 CrabsBackportBlocks.TUFF_WALLS,
-                        CrabsBackportBlocks.TUFF_BRICK_WALLS,
-                        CrabsBackportBlocks.POLISHED_TUFF_WALLS);
+                CrabsBackportBlocks.TUFF_BRICK_WALLS,
+                CrabsBackportBlocks.POLISHED_TUFF_WALLS);
 
         getOrCreateTagBuilder(BlockTags.SLABS).add(
                 CrabsBackportBlocks.TUFF_SLAB,
-                        CrabsBackportBlocks.POLISHED_TUFF_SLAB,
-                        CrabsBackportBlocks.TUFF_BRICK_SLAB
-                );
+                CrabsBackportBlocks.POLISHED_TUFF_SLAB,
+                CrabsBackportBlocks.TUFF_BRICK_SLAB
+        );
 
         getOrCreateTagBuilder(BlockTags.STAIRS).add(
                 CrabsBackportBlocks.TUFF_STAIRS,
-                        CrabsBackportBlocks.POLISHED_TUFF_STAIRS,
-                        CrabsBackportBlocks.TUFF_BRICK_STAIRS
+                CrabsBackportBlocks.POLISHED_TUFF_STAIRS,
+                CrabsBackportBlocks.TUFF_BRICK_STAIRS
         );
 
         getOrCreateTagBuilder(BlockTags.FLOWERS).add(
@@ -133,7 +133,7 @@ public class CrabsBackportBlockTagProvider extends FabricTagProvider.BlockTagPro
                 CrabsBackportBlocks.WEATHERED_COPPER_DOOR,
                 CrabsBackportBlocks.WAXED_WEATHERED_COPPER_DOOR
         );
-        }
-
     }
+
+}
 

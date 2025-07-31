@@ -1,0 +1,6 @@
+{
+  "parent": "crabsbackport:block/template_shelf_inventory",
+  "textures": {
+    "all": "crabsbackport:block/mangrove_shelf"
+  }
+}

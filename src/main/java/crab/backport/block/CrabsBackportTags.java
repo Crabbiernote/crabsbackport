@@ -11,6 +11,8 @@ public class CrabsBackportTags {
     public static class Blocks {
         public static final TagKey<Block> DRY_VEGETATION_MAY_PLACE_ON =
                 createTag("dry_vegetation_may_place_on");
+        public static final TagKey<Block> WOODEN_SHELVES =
+                createTag("wooden_shelves");
     }
 
     public static TagKey<Block> createTag(String name) {

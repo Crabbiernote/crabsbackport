@@ -1,6 +1,8 @@
 package crab.backport;
 
 import crab.backport.block.CrabsBackportBlocks;
+import crab.backport.block.entity.CrabsBackportBlockEntities;
+import crab.backport.client.render.block.entity.ShelfBlockEntityRenderer;
 import crab.backport.particles.FireflyParticle;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
@@ -11,14 +13,17 @@ import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.color.world.GrassColors;
 import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
 import net.minecraft.particle.DefaultParticleType;
 
 @Environment(EnvType.CLIENT)
 public class CrabsBackportClient implements ClientModInitializer {
     public static DefaultParticleType FIREFLY = CrabsBackport.FIREFLY;
+
     @Override
     public void onInitializeClient() {
         ParticleFactoryRegistry.getInstance().register(FIREFLY, FireflyParticle.FireflyFactory::new);
+
         BlockRenderLayerMap.INSTANCE.putBlock(CrabsBackportBlocks.LEAF_LITTER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(CrabsBackportBlocks.WILDFLOWERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(CrabsBackportBlocks.FIREFLY_BUSH, RenderLayer.getCutout());
@@ -57,5 +62,6 @@ public class CrabsBackportClient implements ClientModInitializer {
             return BiomeColors.getGrassColor(world, pos);
         }, CrabsBackportBlocks.BUSH);
         ColorProviderRegistry.ITEM.register((stack, layer) -> GrassColors.getColor(0.5, 1.0), CrabsBackportBlocks.BUSH);
+        BlockEntityRendererFactories.register(CrabsBackportBlockEntities.SHELF_BLOCK_ENTITY, ShelfBlockEntityRenderer::new);
     }
 }

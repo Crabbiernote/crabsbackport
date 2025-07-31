@@ -1,0 +1,6 @@
+{
+  "parent": "crabsbackport:block/template_shelf_center",
+  "textures": {
+    "all": "crabsbackport:block/pale_oak_shelf"
+  }
+}

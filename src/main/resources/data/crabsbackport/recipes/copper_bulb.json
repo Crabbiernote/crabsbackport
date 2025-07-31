@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "key": {
+    "X": {
+      "item": "minecraft:copper_block"
+    },
+    "G": {
+      "item": "minecraft:blaze_rod"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    " X ",
+    "XGX",
+    " R "
+  ],
+  "result": {
+    "item": "crabsbackport:copper_bulb",
+    "count": 4
+  },
+  "show_notification": true
+}

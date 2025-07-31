@@ -23,9 +23,11 @@ public class WanderingTraderEntityMixin extends MerchantEntity {
 
     @Unique
     protected final Random random = Random.create();
+
     public WanderingTraderEntityMixin(EntityType<? extends MerchantEntity> entityType, World world) {
         super(entityType, world);
     }
+
     @Inject(method = "fillRecipes", at = @At("HEAD"))
     public void newfillRecipes(CallbackInfo ci) {
         TradeOffers.Factory[] factorys = TradeOffers.WANDERING_TRADER_TRADES.get(1);
@@ -55,6 +57,7 @@ public class WanderingTraderEntityMixin extends MerchantEntity {
             this.fillRecipesFromPool(tradeOfferList, factorys, 3);
         }
     }
+
     @Override
     public void afterUsing(TradeOffer offer) {
     }

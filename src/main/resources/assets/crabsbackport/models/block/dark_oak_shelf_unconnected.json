@@ -1,0 +1,6 @@
+{
+  "parent": "crabsbackport:block/template_shelf_unconnected",
+  "textures": {
+    "all": "crabsbackport:block/dark_oak_shelf"
+  }
+}

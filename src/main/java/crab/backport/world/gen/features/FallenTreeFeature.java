@@ -104,7 +104,7 @@ public class FallenTreeFeature extends Feature<FallenTreeFeatureConfig> {
     private BlockPos setBlockStateAndGetPos(
             FallenTreeFeatureConfig config, StructureWorldAccess world, Random random, BlockPos.Mutable pos, Function<BlockState, BlockState> stateFunction
     ) {
-        world.setBlockState(pos, (BlockState)stateFunction.apply(config.trunkProvider.get(random, pos)), Block.NOTIFY_ALL);
+        world.setBlockState(pos, (BlockState) stateFunction.apply(config.trunkProvider.get(random, pos)), Block.NOTIFY_ALL);
         this.markBlocksAboveForPostProcessing(world, pos);
         return pos.toImmutable();
     }

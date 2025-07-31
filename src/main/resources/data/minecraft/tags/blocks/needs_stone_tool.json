@@ -24,6 +24,14 @@
     "crabsbackport:oxidized_copper_grate",
     "crabsbackport:waxed_oxidized_copper_grate",
     "crabsbackport:weathered_copper_grate",
-    "crabsbackport:waxed_weathered_copper_grate"
+    "crabsbackport:waxed_weathered_copper_grate",
+    "crabsbackport:copper_bulb",
+    "crabsbackport:waxed_copper_bulb",
+    "crabsbackport:exposed_copper_bulb",
+    "crabsbackport:waxed_exposed_copper_bulb",
+    "crabsbackport:oxidized_copper_bulb",
+    "crabsbackport:waxed_oxidized_copper_bulb",
+    "crabsbackport:weathered_copper_bulb",
+    "crabsbackport:waxed_weathered_copper_bulb"
   ]
 }

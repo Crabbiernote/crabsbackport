@@ -15,10 +15,12 @@ public class ShortDryGrassBlock extends PlantBlock implements Fertilizable {
     public ShortDryGrassBlock(Settings settings) {
         super(settings);
     }
+
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
         return floor.isIn(CrabsBackportTags.Blocks.DRY_VEGETATION_MAY_PLACE_ON) || floor.isOf(Blocks.FARMLAND);
     }
+
     @Override
     public boolean isFertilizable(WorldView world, BlockPos pos, BlockState state, boolean isClient) {
         return true;

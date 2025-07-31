@@ -24,10 +24,12 @@ public class LeafLitterBlock extends FlowerbedBlock {
     public boolean canGrow(World world, Random random, BlockPos pos, BlockState state) {
         return false;
     }
+
     @Override
     public boolean isTransparent(BlockState state, BlockView world, BlockPos pos) {
         return state.getFluidState().isEmpty();
     }
+
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         BlockState blockState = world.getBlockState(pos.down());

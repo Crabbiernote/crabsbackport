@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:copper_block"
+    },
+    "D": {
+      "tag": "minecraft:music_discs"
+    }
+  },
+  "pattern": [
+    "###",
+    "#D#",
+    "###"
+  ],
+  "result": {
+    "item": "crabsbackport:music_disc_creator_music_box"
+  },
+  "show_notification": true
+}

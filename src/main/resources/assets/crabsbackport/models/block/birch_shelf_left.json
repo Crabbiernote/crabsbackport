@@ -1,0 +1,6 @@
+{
+  "parent": "crabsbackport:block/template_shelf_left",
+  "textures": {
+    "all": "crabsbackport:block/birch_shelf"
+  }
+}

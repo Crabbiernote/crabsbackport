@@ -5,20 +5,16 @@ import crab.backport.sound.CrabsBackportSounds;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.block.enums.Instrument;
 import net.minecraft.block.piston.PistonBehavior;
-import net.minecraft.datafixer.TypeReferences;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Util;
 
-import java.util.Set;
+import static net.minecraft.block.Blocks.createLightLevelFromLitBlockState;
 
 public class CrabsBackportBlocks {
     public static final BlockSetType COPPER = new BlockSetType(
@@ -34,6 +30,9 @@ public class CrabsBackportBlocks {
             SoundEvents.BLOCK_STONE_BUTTON_CLICK_OFF,
             SoundEvents.BLOCK_STONE_BUTTON_CLICK_ON
     );
+
+    //Tuff
+
     public static final Block TUFF_STAIRS = registerBlock("tuff_stairs",
             new StairsBlock(Blocks.TUFF.getDefaultState(), FabricBlockSettings.copyOf(Blocks.TUFF)));
     public static final Block TUFF_SLAB = registerBlock("tuff_slab",
@@ -60,20 +59,23 @@ public class CrabsBackportBlocks {
             new WallBlock(FabricBlockSettings.copyOf(Blocks.TUFF)));
     public static final Block CHISELED_TUFF_BRICKS = registerBlock("chiseled_tuff_bricks",
             new Block(FabricBlockSettings.copyOf(Blocks.TUFF)));
+
+    //Foliage
+
     public static final Block LEAF_LITTER = registerBlock("leaf_litter",
-    new LeafLitterBlock(
-            AbstractBlock.Settings.create().mapColor(MapColor.BROWN)
-                    .noCollision()
-                    .sounds(CrabsBackportSounds.LEAF_LITTER_SOUNDS)
-                    .pistonBehavior(PistonBehavior.DESTROY)));
+            new LeafLitterBlock(
+                    AbstractBlock.Settings.create().mapColor(MapColor.BROWN)
+                            .noCollision()
+                            .sounds(CrabsBackportSounds.LEAF_LITTER_SOUNDS)
+                            .pistonBehavior(PistonBehavior.DESTROY)));
     public static final Block BUSH = registerBlock("bush",
-    new BushBlock(AbstractBlock.Settings.create()
-            .mapColor(MapColor.DARK_GREEN)
-            .noCollision()
-            .breakInstantly()
-            .sounds(BlockSoundGroup.GRASS)
-            .burnable()
-            .pistonBehavior(PistonBehavior.DESTROY)));
+            new BushBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DARK_GREEN)
+                    .noCollision()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)));
 
     public static final Block WILDFLOWERS = registerBlock("wildflowers",
             new FlowerbedBlock(FabricBlockSettings.copyOf(Blocks.PINK_PETALS).sounds(BlockSoundGroup.PINK_PETALS).mapColor(MapColor.YELLOW)));
@@ -89,104 +91,170 @@ public class CrabsBackportBlocks {
     public static final Block FIREFLY_BUSH = registerBlock("firefly_bush",
             new FireflyBushBlock(
                     AbstractBlock.Settings.create()
-                    .mapColor(MapColor.DARK_GREEN)
-                    .burnable()
-                    .luminance(state -> 2)
+                            .mapColor(MapColor.DARK_GREEN)
+                            .burnable()
+                            .luminance(state -> 2)
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.SWEET_BERRY_BUSH)
+                            .pistonBehavior(PistonBehavior.DESTROY)));
+    public static final Block SHORT_DRY_GRASS = registerBlock("short_dry_grass",
+            new ShortDryGrassBlock(AbstractBlock.Settings.create()
+                    .mapColor(MapColor.YELLOW)
+                    .replaceable()
                     .noCollision()
                     .breakInstantly()
-                    .sounds(BlockSoundGroup.SWEET_BERRY_BUSH)
-                    .pistonBehavior(PistonBehavior.DESTROY)));
-    public static final Block SHORT_DRY_GRASS = registerBlock("short_dry_grass",
-        new ShortDryGrassBlock(AbstractBlock.Settings.create()
-                .mapColor(MapColor.YELLOW)
-                .replaceable()
-                .noCollision()
-                .breakInstantly()
-                .sounds(BlockSoundGroup.GRASS)
-                .burnable()
-                .pistonBehavior(PistonBehavior.DESTROY)
-        ));
+                    .sounds(BlockSoundGroup.GRASS)
+                    .burnable()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+            ));
     public static final Block TALL_DRY_GRASS = registerBlock("tall_dry_grass",
-    new TallDryGrassBlock(
-            AbstractBlock.Settings.create()
-            .mapColor(MapColor.YELLOW)
-            .replaceable()
-            .noCollision()
-            .breakInstantly()
-            .sounds(BlockSoundGroup.GRASS)
-            .burnable()
-            .pistonBehavior(PistonBehavior.DESTROY)));
+            new TallDryGrassBlock(
+                    AbstractBlock.Settings.create()
+                            .mapColor(MapColor.YELLOW)
+                            .replaceable()
+                            .noCollision()
+                            .breakInstantly()
+                            .sounds(BlockSoundGroup.GRASS)
+                            .burnable()
+                            .pistonBehavior(PistonBehavior.DESTROY)));
+
+    //Copper stuff
 
     public static final Block CHISELED_COPPER = registerBlock("chiseled_copper",
             new OxidizableBlock(Oxidizable.OxidationLevel.UNAFFECTED, FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)));
     public static final Block WEATHERED_CHISELED_COPPER = registerBlock("weathered_chiseled_copper",
-    new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER)));
+            new OxidizableBlock(Oxidizable.OxidationLevel.WEATHERED, FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER)));
     public static final Block EXPOSED_CHISELED_COPPER = registerBlock("exposed_chiseled_copper",
-    new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER)));
+            new OxidizableBlock(Oxidizable.OxidationLevel.EXPOSED, FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER)));
     public static final Block OXIDIZED_CHISELED_COPPER = registerBlock("oxidized_chiseled_copper",
-    new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER)));
+            new OxidizableBlock(Oxidizable.OxidationLevel.OXIDIZED, FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER)));
     public static final Block WAXED_CHISELED_COPPER = registerBlock("waxed_chiseled_copper",
-             new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)));
+            new Block(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)));
     public static final Block WAXED_WEATHERED_CHISELED_COPPER = registerBlock("waxed_weathered_chiseled_copper",
-    new Block(FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER)));
+            new Block(FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER)));
     public static final Block WAXED_EXPOSED_CHISELED_COPPER = registerBlock("waxed_exposed_chiseled_copper",
-    new Block(FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER)));
+            new Block(FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER)));
     public static final Block WAXED_OXIDIZED_CHISELED_COPPER = registerBlock("waxed_oxidized_chiseled_copper",
-    new Block(FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER)));
+            new Block(FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER)));
     public static final Block COPPER_TRAPDOOR = registerBlock("copper_trapdoor",
-        new OxidizableTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).nonOpaque(), Oxidizable.OxidationLevel.UNAFFECTED, CrabsBackportBlocks.COPPER));
+            new OxidizableTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).nonOpaque(), Oxidizable.OxidationLevel.UNAFFECTED, CrabsBackportBlocks.COPPER));
     public static final Block EXPOSED_COPPER_TRAPDOOR = registerBlock("exposed_copper_trapdoor",
-    new OxidizableTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.EXPOSED, CrabsBackportBlocks.COPPER));
+            new OxidizableTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.EXPOSED, CrabsBackportBlocks.COPPER));
     public static final Block WEATHERED_COPPER_TRAPDOOR = registerBlock("weathered_copper_trapdoor",
-    new OxidizableTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.WEATHERED, CrabsBackportBlocks.COPPER));
+            new OxidizableTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.WEATHERED, CrabsBackportBlocks.COPPER));
     public static final Block OXIDIZED_COPPER_TRAPDOOR = registerBlock("oxidized_copper_trapdoor",
-    new OxidizableTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.OXIDIZED, CrabsBackportBlocks.COPPER));
+            new OxidizableTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.OXIDIZED, CrabsBackportBlocks.COPPER));
     public static final Block WAXED_COPPER_TRAPDOOR = registerBlock("waxed_copper_trapdoor",
-    new OxidizableTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).nonOpaque(), Oxidizable.OxidationLevel.UNAFFECTED, CrabsBackportBlocks.COPPER));
+            new OxidizableTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).nonOpaque(), Oxidizable.OxidationLevel.UNAFFECTED, CrabsBackportBlocks.COPPER));
     public static final Block WAXED_EXPOSED_COPPER_TRAPDOOR = registerBlock("waxed_exposed_copper_trapdoor",
-    new OxidizableTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.EXPOSED, CrabsBackportBlocks.COPPER));
+            new OxidizableTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.EXPOSED, CrabsBackportBlocks.COPPER));
     public static final Block WAXED_WEATHERED_COPPER_TRAPDOOR = registerBlock("waxed_weathered_copper_trapdoor",
-    new OxidizableTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.WEATHERED, CrabsBackportBlocks.COPPER));
+            new OxidizableTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.WEATHERED, CrabsBackportBlocks.COPPER));
     public static final Block WAXED_OXIDIZED_COPPER_TRAPDOOR = registerBlock("waxed_oxidized_copper_trapdoor",
-    new OxidizableTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.OXIDIZED, CrabsBackportBlocks.COPPER));
+            new OxidizableTrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.OXIDIZED, CrabsBackportBlocks.COPPER));
     public static final Block COPPER_DOOR = registerBlock("copper_door",
             new OxidizableDoorBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).nonOpaque(), Oxidizable.OxidationLevel.UNAFFECTED, CrabsBackportBlocks.COPPER));
     public static final Block EXPOSED_COPPER_DOOR = registerBlock("exposed_copper_door",
-    new OxidizableDoorBlock(FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.EXPOSED, CrabsBackportBlocks.COPPER));
+            new OxidizableDoorBlock(FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.EXPOSED, CrabsBackportBlocks.COPPER));
     public static final Block WEATHERED_COPPER_DOOR = registerBlock("weathered_copper_door",
-    new OxidizableDoorBlock(FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.WEATHERED, CrabsBackportBlocks.COPPER));
+            new OxidizableDoorBlock(FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.WEATHERED, CrabsBackportBlocks.COPPER));
     public static final Block OXIDIZED_COPPER_DOOR = registerBlock("oxidized_copper_door",
-    new OxidizableDoorBlock(FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.OXIDIZED, CrabsBackportBlocks.COPPER));
+            new OxidizableDoorBlock(FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.OXIDIZED, CrabsBackportBlocks.COPPER));
     public static final Block WAXED_COPPER_DOOR = registerBlock("waxed_copper_door",
-    new OxidizableDoorBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).nonOpaque(), Oxidizable.OxidationLevel.UNAFFECTED, CrabsBackportBlocks.COPPER));
+            new OxidizableDoorBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).nonOpaque(), Oxidizable.OxidationLevel.UNAFFECTED, CrabsBackportBlocks.COPPER));
     public static final Block WAXED_EXPOSED_COPPER_DOOR = registerBlock("waxed_exposed_copper_door",
-    new OxidizableDoorBlock(FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.EXPOSED, CrabsBackportBlocks.COPPER));
+            new OxidizableDoorBlock(FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.EXPOSED, CrabsBackportBlocks.COPPER));
     public static final Block WAXED_OXIDIZED_COPPER_DOOR = registerBlock("waxed_oxidized_copper_door",
-    new OxidizableDoorBlock(FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.OXIDIZED, CrabsBackportBlocks.COPPER));
+            new OxidizableDoorBlock(FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.OXIDIZED, CrabsBackportBlocks.COPPER));
     public static final Block WAXED_WEATHERED_COPPER_DOOR = registerBlock("waxed_weathered_copper_door",
-    new OxidizableDoorBlock(FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.WEATHERED, CrabsBackportBlocks.COPPER));
+            new OxidizableDoorBlock(FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER).nonOpaque(), Oxidizable.OxidationLevel.WEATHERED, CrabsBackportBlocks.COPPER));
     public static final Block COPPER_GRATE = registerBlock("copper_grate",
-           new OxidizableGrateBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)
-                   .nonOpaque().sounds(CrabsBackportSounds.COPPER_GRATE), Oxidizable.OxidationLevel.UNAFFECTED));
+            new OxidizableGrateBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK)
+                    .nonOpaque().sounds(CrabsBackportSounds.COPPER_GRATE), Oxidizable.OxidationLevel.UNAFFECTED));
     public static final Block EXPOSED_COPPER_GRATE = registerBlock("exposed_copper_grate",
-    new OxidizableGrateBlock(FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER).nonOpaque().sounds(CrabsBackportSounds.COPPER_GRATE), Oxidizable.OxidationLevel.EXPOSED));
+            new OxidizableGrateBlock(FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER).nonOpaque().sounds(CrabsBackportSounds.COPPER_GRATE), Oxidizable.OxidationLevel.EXPOSED));
     public static final Block WEATHERED_COPPER_GRATE = registerBlock("weathered_copper_grate",
-    new OxidizableGrateBlock(FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER).nonOpaque().sounds(CrabsBackportSounds.COPPER_GRATE), Oxidizable.OxidationLevel.WEATHERED));
+            new OxidizableGrateBlock(FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER).nonOpaque().sounds(CrabsBackportSounds.COPPER_GRATE), Oxidizable.OxidationLevel.WEATHERED));
     public static final Block OXIDIZED_COPPER_GRATE = registerBlock("oxidized_copper_grate",
-    new OxidizableGrateBlock(FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER).nonOpaque().sounds(CrabsBackportSounds.COPPER_GRATE), Oxidizable.OxidationLevel.OXIDIZED));
+            new OxidizableGrateBlock(FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER).nonOpaque().sounds(CrabsBackportSounds.COPPER_GRATE), Oxidizable.OxidationLevel.OXIDIZED));
     public static final Block WAXED_COPPER_GRATE = registerBlock("waxed_copper_grate",
             new GrateBlock(FabricBlockSettings.copyOf(Blocks.COPPER_BLOCK).sounds(CrabsBackportSounds.COPPER_GRATE).nonOpaque()));
     public static final Block WAXED_EXPOSED_COPPER_GRATE = registerBlock("waxed_exposed_copper_grate",
-    new GrateBlock(FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER).sounds(CrabsBackportSounds.COPPER_GRATE).nonOpaque()));
+            new GrateBlock(FabricBlockSettings.copyOf(Blocks.EXPOSED_COPPER).sounds(CrabsBackportSounds.COPPER_GRATE).nonOpaque()));
     public static final Block WAXED_WEATHERED_COPPER_GRATE = registerBlock("waxed_weathered_copper_grate",
-    new GrateBlock(FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER).sounds(CrabsBackportSounds.COPPER_GRATE).nonOpaque()));
+            new GrateBlock(FabricBlockSettings.copyOf(Blocks.WEATHERED_COPPER).sounds(CrabsBackportSounds.COPPER_GRATE).nonOpaque()));
     public static final Block WAXED_OXIDIZED_COPPER_GRATE = registerBlock("waxed_oxidized_copper_grate",
-    new GrateBlock(FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER).sounds(CrabsBackportSounds.COPPER_GRATE).nonOpaque()));
+            new GrateBlock(FabricBlockSettings.copyOf(Blocks.OXIDIZED_COPPER).sounds(CrabsBackportSounds.COPPER_GRATE).nonOpaque()));
 
-    private static Block registerBlock(String name, Block block){
+
+    public static final Block COPPER_BULB = registerBlock("copper_bulb",
+            new OxidizableBulbBlock(
+                    FabricBlockSettings.create()
+                    .mapColor(MapColor.ORANGE)
+                    .strength(3.0F, 6.0F)
+                    .sounds(CrabsBackportSounds.COPPER_BULB)
+                    .requiresTool()
+                    .solidBlock(Blocks::never)
+                    .luminance(createLightLevelFromLitBlockState(15)),
+                    Oxidizable.OxidationLevel.UNAFFECTED));
+
+    public static final Block EXPOSED_COPPER_BULB = registerBlock("exposed_copper_bulb",
+            new OxidizableBulbBlock(FabricBlockSettings.copyOf(CrabsBackportBlocks.COPPER_BULB)
+                    .mapColor(MapColor.TERRACOTTA_LIGHT_GRAY)
+                    .luminance(createLightLevelFromLitBlockState(12)),
+                    Oxidizable.OxidationLevel.EXPOSED));
+    public static final Block WEATHERED_COPPER_BULB = registerBlock("weathered_copper_bulb",
+            new OxidizableBulbBlock(FabricBlockSettings.copyOf(CrabsBackportBlocks.COPPER_BULB)
+                    .mapColor(MapColor.DARK_AQUA)
+                    .luminance(createLightLevelFromLitBlockState(8)),
+                    Oxidizable.OxidationLevel.WEATHERED));
+    public static final Block OXIDIZED_COPPER_BULB = registerBlock("oxidized_copper_bulb",
+            new OxidizableBulbBlock(FabricBlockSettings.copyOf(CrabsBackportBlocks.COPPER_BULB)
+                    .mapColor(MapColor.TEAL)
+                    .luminance(createLightLevelFromLitBlockState(4)),
+                    Oxidizable.OxidationLevel.OXIDIZED));
+    public static final Block WAXED_COPPER_BULB = registerBlock("waxed_copper_bulb",
+            new BulbBlock(FabricBlockSettings.copyOf(CrabsBackportBlocks.COPPER_BULB)));
+    public static final Block WAXED_EXPOSED_COPPER_BULB = registerBlock("waxed_exposed_copper_bulb",
+            new BulbBlock(FabricBlockSettings.copyOf(CrabsBackportBlocks.EXPOSED_COPPER_BULB)));
+    public static final Block WAXED_WEATHERED_COPPER_BULB = registerBlock("waxed_weathered_copper_bulb",
+            new BulbBlock(FabricBlockSettings.copyOf(CrabsBackportBlocks.WEATHERED_COPPER_BULB)));
+    public static final Block WAXED_OXIDIZED_COPPER_BULB = registerBlock("waxed_oxidized_copper_bulb",
+            new BulbBlock(FabricBlockSettings.copyOf(CrabsBackportBlocks.OXIDIZED_COPPER_BULB)));
+
+    //Shelves
+
+    public static final Block OAK_SHELF = registerBlock("oak_shelf",
+            new ShelfBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN).instrument(Instrument.BASS).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable().strength(2.0F, 3.0F)));
+    public static final Block ACACIA_SHELF = registerBlock("acacia_shelf",
+            new ShelfBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN).instrument(Instrument.BASS).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable().strength(2.0F, 3.0F)));
+    public static final Block BAMBOO_SHELF = registerBlock("bamboo_shelf",
+            new ShelfBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN).instrument(Instrument.BASS).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable().strength(2.0F, 3.0F)));
+    public static final Block BIRCH_SHELF = registerBlock("birch_shelf",
+            new ShelfBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN).instrument(Instrument.BASS).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable().strength(2.0F, 3.0F)));
+    public static final Block CHERRY_SHELF = registerBlock("cherry_shelf",
+            new ShelfBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN).instrument(Instrument.BASS).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable().strength(2.0F, 3.0F)));
+    public static final Block CRIMSON_SHELF = registerBlock("crimson_shelf",
+            new ShelfBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN).instrument(Instrument.BASS).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable().strength(2.0F, 3.0F)));
+    public static final Block DARK_OAK_SHELF = registerBlock("dark_oak_shelf",
+            new ShelfBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN).instrument(Instrument.BASS).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable().strength(2.0F, 3.0F)));
+    public static final Block JUNGLE_SHELF = registerBlock("jungle_shelf",
+            new ShelfBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN).instrument(Instrument.BASS).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable().strength(2.0F, 3.0F)));
+    public static final Block MANGROVE_SHELF = registerBlock("mangrove_shelf",
+            new ShelfBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN).instrument(Instrument.BASS).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable().strength(2.0F, 3.0F)));
+    public static final Block PALE_OAK_SHELF = registerBlock("pale_oak_shelf",
+            new ShelfBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN).instrument(Instrument.BASS).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable().strength(2.0F, 3.0F)));
+    public static final Block SPRUCE_SHELF = registerBlock("spruce_shelf",
+            new ShelfBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN).instrument(Instrument.BASS).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable().strength(2.0F, 3.0F)));
+    public static final Block WARPED_SHELF = registerBlock("warped_shelf",
+            new ShelfBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN).instrument(Instrument.BASS).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable().strength(2.0F, 3.0F)));
+
+    private static Block registerBlock(String name, Block block) {
         registerBlockItems(name, block);
         return Registry.register(Registries.BLOCK, new Identifier(CrabsBackport.MOD_ID, name), block);
     }
+
     public static BlockItem registerBlockItems(String name, Block block) {
         return Registry.register(Registries.ITEM, new Identifier(CrabsBackport.MOD_ID, name),
                 new BlockItem(block, new FabricItemSettings()));

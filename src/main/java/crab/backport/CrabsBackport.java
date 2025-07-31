@@ -2,6 +2,7 @@ package crab.backport;
 
 import crab.backport.block.CrabsBackportBlocks;
 import crab.backport.block.OxidizableBlockRegistryistoolong;
+import crab.backport.block.entity.CrabsBackportBlockEntities;
 import crab.backport.entity.PaintingVarientRegistry;
 import crab.backport.entity.WanderingTraderTrades;
 import crab.backport.item.CrabsBackportItemGroups;
@@ -22,30 +23,32 @@ import org.slf4j.LoggerFactory;
 
 
 public class CrabsBackport implements ModInitializer {
-	public static final String MOD_ID = "crabsbackport";
+    public static final String MOD_ID = "crabsbackport";
 
-	// This logger is used to write text to the console and the log file.
-	// It is considered best practice to use your mod id as the logger's name.
-	// That way, it's clear which mod wrote info, warnings, and errors.
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-	public static final DefaultParticleType FIREFLY = FabricParticleTypes.simple();
-
-
-	@Override	public void onInitialize() {
-		Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "firefly"), FIREFLY);
-
-		CrabsBackportTreeDecorators.init();
-		CrabsBackportFeatures.init();
-		CrabsBackportBlocks.registerBlocks();
-		CrabsBackportItems.registerModItems();
-		CrabsBackportSounds.registerSounds();
-		CrabsBackportItemGroups.registerItemGroups();
-		CrabsBackportWorldGeneration.generateModWorldGen();
-		OxidizableBlockRegistryistoolong.registerBlocks();
-		WanderingTraderTrades.registerTrades();
-		LootTableEditing.editLootTables();
-		PaintingVarientRegistry.registerPaintingVariants();
+    // This logger is used to write text to the console and the log file.
+    // It is considered best practice to use your mod id as the logger's name.
+    // That way, it's clear which mod wrote info, warnings, and errors.
+    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+    public static final DefaultParticleType FIREFLY = FabricParticleTypes.simple();
 
 
-	}
+    @Override
+    public void onInitialize() {
+        Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "firefly"), FIREFLY);
+
+        CrabsBackportTreeDecorators.init();
+        CrabsBackportFeatures.init();
+        CrabsBackportBlocks.registerBlocks();
+        CrabsBackportItems.registerModItems();
+        CrabsBackportSounds.registerSounds();
+        CrabsBackportItemGroups.registerItemGroups();
+        CrabsBackportWorldGeneration.generateModWorldGen();
+        OxidizableBlockRegistryistoolong.registerBlocks();
+        WanderingTraderTrades.registerTrades();
+        LootTableEditing.editLootTables();
+        PaintingVarientRegistry.registerPaintingVariants();
+        CrabsBackportBlockEntities.registerBlockEntities();
+
+
+    }
 }

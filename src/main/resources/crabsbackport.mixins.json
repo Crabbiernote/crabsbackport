@@ -5,7 +5,6 @@
   "mixins": [
     "CactusFlowerMixin",
     "ExampleMixin",
-    "MerchantEntityMixin",
     "WanderingTraderEntityMixin"
   ],
   "injectors": {

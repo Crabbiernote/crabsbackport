@@ -24,48 +24,49 @@ public class CrabsbackportConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_SPRUCE_TREE = registerKey("fallen_spruce_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_JUNGLE_TREE = registerKey("fallen_jungle_tree");
 
-public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
-       register(context,
-               BUSH_KEY,
-               Feature.RANDOM_PATCH,
-               createRandomPatchFeatureConfig(
-               new WeightedBlockStateProvider(DataPool.<BlockState>builder()
-                       .add(CrabsBackportBlocks.BUSH.getDefaultState(), 1)),
-                       128));
+    public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
+        register(context,
+                BUSH_KEY,
+                Feature.RANDOM_PATCH,
+                createRandomPatchFeatureConfig(
+                        new WeightedBlockStateProvider(DataPool.<BlockState>builder()
+                                .add(CrabsBackportBlocks.BUSH.getDefaultState(), 1)),
+                        128));
 
         register(context,
                 BIRCH_WILDFLOWER_KEY,
                 Feature.FLOWER,
                 createRandomPatchFeatureConfig(
-                new WeightedBlockStateProvider(DataPool.<BlockState>builder()
-                        .add(CrabsBackportBlocks.WILDFLOWERS.getDefaultState(), 1)),
+                        new WeightedBlockStateProvider(DataPool.<BlockState>builder()
+                                .add(CrabsBackportBlocks.WILDFLOWERS.getDefaultState(), 1)),
                         128));
-    register(context,
-            MEADOW_WILDFLOWER_KEY,
-            Feature.FLOWER,
-            createRandomPatchFeatureConfig(
-                    new WeightedBlockStateProvider(DataPool.<BlockState>builder()
-                            .add(CrabsBackportBlocks.WILDFLOWERS.getDefaultState(), 1)),
-                    128));
-    register(context,
-            FIREFLY_BUSH_KEY,
-            Feature.RANDOM_PATCH,
-            createRandomPatchFeatureConfig(
-                    new WeightedBlockStateProvider(DataPool.<BlockState>builder()
-                            .add(CrabsBackportBlocks.FIREFLY_BUSH.getDefaultState(), 1)),
-128));
-    register(context,
-            DRY_GRASS,
-            Feature.RANDOM_PATCH,
-            createRandomPatchFeatureConfig(
-                    new WeightedBlockStateProvider(DataPool.<BlockState>builder()
-                            .add(CrabsBackportBlocks.TALL_DRY_GRASS.getDefaultState(), 1)
-                            .add(CrabsBackportBlocks.SHORT_DRY_GRASS.getDefaultState(), 1)),
-                    64
-            ));
+        register(context,
+                MEADOW_WILDFLOWER_KEY,
+                Feature.FLOWER,
+                createRandomPatchFeatureConfig(
+                        new WeightedBlockStateProvider(DataPool.<BlockState>builder()
+                                .add(CrabsBackportBlocks.WILDFLOWERS.getDefaultState(), 1)),
+                        128));
+        register(context,
+                FIREFLY_BUSH_KEY,
+                Feature.RANDOM_PATCH,
+                createRandomPatchFeatureConfig(
+                        new WeightedBlockStateProvider(DataPool.<BlockState>builder()
+                                .add(CrabsBackportBlocks.FIREFLY_BUSH.getDefaultState(), 1)),
+                        128));
+        register(context,
+                DRY_GRASS,
+                Feature.RANDOM_PATCH,
+                createRandomPatchFeatureConfig(
+                        new WeightedBlockStateProvider(DataPool.<BlockState>builder()
+                                .add(CrabsBackportBlocks.TALL_DRY_GRASS.getDefaultState(), 1)
+                                .add(CrabsBackportBlocks.SHORT_DRY_GRASS.getDefaultState(), 1)),
+                        64
+                ));
 
-}
-public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
+    }
+
+    public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
         return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, new Identifier(CrabsBackport.MOD_ID, name));
     }
 
@@ -73,6 +74,7 @@ public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {
                                                                                    RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {
         context.register(key, new ConfiguredFeature<>(feature, configuration));
     }
+
     private static RandomPatchFeatureConfig createRandomPatchFeatureConfig(BlockStateProvider block, int tries) {
         return ConfiguredFeatures.createRandomPatchFeatureConfig(tries, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(block)));
     }

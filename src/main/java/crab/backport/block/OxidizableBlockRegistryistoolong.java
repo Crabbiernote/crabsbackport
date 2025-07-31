@@ -16,6 +16,9 @@ public class OxidizableBlockRegistryistoolong {
         OxidizableBlocksRegistry.registerOxidizableBlockPair(CrabsBackportBlocks.COPPER_GRATE, CrabsBackportBlocks.EXPOSED_COPPER_GRATE);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(CrabsBackportBlocks.EXPOSED_COPPER_GRATE, CrabsBackportBlocks.WEATHERED_COPPER_GRATE);
         OxidizableBlocksRegistry.registerOxidizableBlockPair(CrabsBackportBlocks.WEATHERED_COPPER_GRATE, CrabsBackportBlocks.OXIDIZED_COPPER_GRATE);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(CrabsBackportBlocks.COPPER_BULB, CrabsBackportBlocks.EXPOSED_COPPER_BULB);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(CrabsBackportBlocks.EXPOSED_COPPER_BULB, CrabsBackportBlocks.WEATHERED_COPPER_BULB);
+        OxidizableBlocksRegistry.registerOxidizableBlockPair(CrabsBackportBlocks.WEATHERED_COPPER_BULB, CrabsBackportBlocks.OXIDIZED_COPPER_BULB);
 
 
         OxidizableBlocksRegistry.registerWaxableBlockPair(CrabsBackportBlocks.CHISELED_COPPER, CrabsBackportBlocks.WAXED_CHISELED_COPPER);
@@ -34,5 +37,9 @@ public class OxidizableBlockRegistryistoolong {
         OxidizableBlocksRegistry.registerWaxableBlockPair(CrabsBackportBlocks.EXPOSED_COPPER_GRATE, CrabsBackportBlocks.WAXED_EXPOSED_COPPER_GRATE);
         OxidizableBlocksRegistry.registerWaxableBlockPair(CrabsBackportBlocks.WEATHERED_COPPER_GRATE, CrabsBackportBlocks.WAXED_WEATHERED_COPPER_GRATE);
         OxidizableBlocksRegistry.registerWaxableBlockPair(CrabsBackportBlocks.OXIDIZED_COPPER_GRATE, CrabsBackportBlocks.WAXED_OXIDIZED_COPPER_GRATE);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(CrabsBackportBlocks.COPPER_BULB, CrabsBackportBlocks.WAXED_COPPER_BULB);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(CrabsBackportBlocks.EXPOSED_COPPER_BULB, CrabsBackportBlocks.WAXED_EXPOSED_COPPER_BULB);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(CrabsBackportBlocks.WEATHERED_COPPER_BULB, CrabsBackportBlocks.WAXED_WEATHERED_COPPER_BULB);
+        OxidizableBlocksRegistry.registerWaxableBlockPair(CrabsBackportBlocks.OXIDIZED_COPPER_BULB, CrabsBackportBlocks.WAXED_OXIDIZED_COPPER_BULB);
     }
 }

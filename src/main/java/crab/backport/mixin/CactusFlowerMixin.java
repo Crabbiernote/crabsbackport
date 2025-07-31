@@ -1,14 +1,12 @@
 package crab.backport.mixin;
 
 import crab.backport.block.CrabsBackportBlocks;
-import net.minecraft.block.*;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.registry.tag.FluidTags;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.CactusBlock;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
-import net.minecraft.world.WorldView;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -19,7 +17,7 @@ import static net.minecraft.block.CactusBlock.AGE;
 @Mixin(CactusBlock.class)
 public class CactusFlowerMixin extends Block {
     @Inject(method = "randomTick", at = @At(value = "HEAD"))
-    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random, CallbackInfo ci){
+    public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random, CallbackInfo ci) {
         BlockPos blockPos = pos.up();
         if (world.isAir(blockPos)) {
             int i = 1;
@@ -40,7 +38,7 @@ public class CactusFlowerMixin extends Block {
                 world.setBlockState(blockPos, this.getDefaultState());
                 BlockState blockState = state.with(AGE, 0);
                 world.setBlockState(pos, blockState, Block.NO_REDRAW);
-                world.updateNeighbor(blockState, blockPos, this, blockPos , false);
+                world.updateNeighbor(blockState, blockPos, this, blockPos, false);
             }
 
             if (j < 15) {

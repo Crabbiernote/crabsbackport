@@ -33,7 +33,8 @@ public abstract class BeaconBlockEntityRendererMixin {
             float[] color,
             float innerRadius,
             float outerRadius
-    ) {}
+    ) {
+    }
 
     @Shadow
     protected static void renderBeam(MatrixStack matrices, VertexConsumerProvider vertexConsumers, float tickDelta, long worldTime, int yOffset, int maxY, float[] color) {
@@ -49,7 +50,7 @@ public abstract class BeaconBlockEntityRendererMixin {
         int k = 0;
 
         for (int m = 0; m < list.size(); m++) {
-            BeaconBlockEntity.BeamSegment beamSegment = (BeaconBlockEntity.BeamSegment)list.get(m);
+            BeaconBlockEntity.BeamSegment beamSegment = (BeaconBlockEntity.BeamSegment) list.get(m);
             renderBeam(matrixStack, vertexConsumerProvider, f, l, k, m == list.size() - 1 ? 2024 : beamSegment.getHeight(), beamSegment.getColor());
             k += beamSegment.getHeight();
         }
@@ -69,8 +70,8 @@ public abstract class BeaconBlockEntityRendererMixin {
         ClientPlayerEntity clientPlayerEntity = MinecraftClient.getInstance().player;
         if (clientPlayerEntity == null) return;
         Vec3d cameraPos = clientPlayerEntity.getCameraPosVec(tickDelta);
-        float distance = (float)cameraPos.subtract(beaconBlockEntity.getPos().toCenterPos()).horizontalLength();
+        float distance = (float) cameraPos.subtract(beaconBlockEntity.getPos().toCenterPos()).horizontalLength();
         float scale = clientPlayerEntity.isUsingSpyglass() ? 1.0F : Math.max(1.0F, distance / 64.0F); // Example scaling
-        renderBeam(matrices, vertexConsumers, BEAM_TEXTURE, tickDelta, scale, worldTime, yOffset, maxY, color, 0.2F * scale, 0.25F* scale);
+        renderBeam(matrices, vertexConsumers, BEAM_TEXTURE, tickDelta, scale, worldTime, yOffset, maxY, color, 0.2F * scale, 0.25F * scale);
     }
 }

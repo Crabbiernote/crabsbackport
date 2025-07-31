@@ -5,6 +5,9 @@
   "ingredients": [
     {
       "item": "crabsbackport:weathered_copper_trapdoor"
+    },
+    {
+      "item": "minecraft:honeycomb"
     }
   ],
   "result": {

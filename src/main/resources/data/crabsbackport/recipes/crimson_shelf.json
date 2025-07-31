@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "item": "minecraft:stripped_crimson_stem"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "   ",
+    "XXX"
+  ],
+  "result": {
+    "item": "crabsbackport:crimson_shelf",
+    "count": 6
+  },
+  "show_notification": true
+}

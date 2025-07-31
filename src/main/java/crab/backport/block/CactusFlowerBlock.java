@@ -8,6 +8,7 @@ import net.minecraft.world.BlockView;
 
 public class CactusFlowerBlock extends PlantBlock {
     private static final VoxelShape SHAPE = Block.createCuboidShape(1.0, 0.0, 1.0, 15.0, 12.0, 15.0);
+
     public CactusFlowerBlock(Settings settings) {
         super(settings);
     }
@@ -19,7 +20,7 @@ public class CactusFlowerBlock extends PlantBlock {
 
     @Override
     protected boolean canPlantOnTop(BlockState floor, BlockView world, BlockPos pos) {
-        BlockState blockState =world.getBlockState(pos);
+        BlockState blockState = world.getBlockState(pos);
         return blockState.isOf(Blocks.CACTUS) || blockState.isOf(Blocks.FARMLAND) || blockState.isSideSolid(world, pos, Direction.UP, SideShapeType.CENTER);
     }
 }

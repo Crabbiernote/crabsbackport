@@ -1,7 +1,7 @@
 package crab.backport.world.gen.features;
 
-import crab.backport.CrabsBackport;
 import com.mojang.serialization.Codec;
+import crab.backport.CrabsBackport;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
