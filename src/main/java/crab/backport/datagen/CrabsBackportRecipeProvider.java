@@ -1,12 +1,17 @@
 package crab.backport.datagen;
 
 import crab.backport.block.CrabsBackportBlocks;
+import crab.backport.block.CrabsBackportTags;
+import crab.backport.item.CrabsBackportItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
+import net.minecraft.block.Waterloggable;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
+import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.book.RecipeCategory;
 
 import java.util.List;
 import java.util.function.Consumer;
@@ -30,6 +35,15 @@ public class CrabsBackportRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void generate(Consumer<RecipeJsonProvider> consumer) {
+        offerPlanksRecipe(consumer, CrabsBackportBlocks.PALE_OAK_PLANKS, CrabsBackportTags.Items.PALE_OAK_LOGS, 4);
+        offerHangingSignRecipe(consumer, CrabsBackportItems.PALE_OAK_HANGING_SIGN, CrabsBackportBlocks.STRIPPED_PALE_OAK_LOG);
+        offerSlabRecipe(consumer, RecipeCategory.BUILDING_BLOCKS, CrabsBackportBlocks.PALE_OAK_SLAB, CrabsBackportBlocks.PALE_OAK_PLANKS);
+//        createStairsRecipe(CrabsBackportBlocks.PALE_OAK_STAIRS, Ingredient.ofItems(CrabsBackportBlocks.PALE_OAK_PLANKS));
+//        createDoorRecipe(CrabsBackportBlocks.PALE_OAK_DOOR, Ingredient.ofItems(CrabsBackportBlocks.PALE_OAK_PLANKS));
+//        createTrapdoorRecipe(CrabsBackportBlocks.PALE_OAK_TRAPDOOR, Ingredient.ofItems(CrabsBackportBlocks.PALE_OAK_PLANKS));
+//        createFenceRecipe(CrabsBackportBlocks.PALE_OAK_FENCE, Ingredient.ofItems(CrabsBackportBlocks.PALE_OAK_PLANKS));
+//        createFenceGateRecipe(CrabsBackportBlocks.PALE_OAK_FENCE_GATE, Ingredient.ofItems(CrabsBackportBlocks.PALE_OAK_PLANKS));
+//        createPressurePlateRecipe(RecipeCategory.REDSTONE, CrabsBackportBlocks.PALE_OAK_PRESSURE_PLATE, Ingredient.ofItems(CrabsBackportBlocks.PALE_OAK_PLANKS));
 
     }
 }

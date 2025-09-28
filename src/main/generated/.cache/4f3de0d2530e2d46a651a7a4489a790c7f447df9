@@ -1,0 +1,15 @@
+// 1.20.1	2025-09-28T13:20:32.7724212	Crab's Backport/Tags for minecraft:block
+c13df44ebc45d773b5eb0175c1879a2a32a5ff77 data\minecraft\tags\blocks\wooden_buttons.json
+40b267be9049e61b0eb30a9993941a831f23d18b data\minecraft\tags\blocks\wall_hanging_signs.json
+77f5aa4c7e6d73ea1acc17f71f5d0b2b807d77f8 data\minecraft\tags\blocks\standing_signs.json
+81dcd47041d2d80c165d156e8d3a21099619aed1 data\minecraft\tags\blocks\fence_gates.json
+31846d375bb4b34c871786a511450563f0d6ed42 data\minecraft\tags\blocks\saplings.json
+e2bc96c79aed788a02044ab27a814a3453402565 data\minecraft\tags\blocks\logs_that_burn.json
+1f1da115d0aa85e28ac45d626592eed668625d1a data\minecraft\tags\blocks\wooden_stairs.json
+355c823fe7827e9954fa04869a58a240f82b1889 data\minecraft\tags\blocks\wooden_doors.json
+696bc1b08bdfbfcf467a95c0b95e61a98950588f data\minecraft\tags\blocks\wooden_pressure_plates.json
+94168ccbc37efe7d9f7e8a11081d250bc0f0065c data\minecraft\tags\blocks\wall_signs.json
+dd5e533fd00a4c51892bcd752027fc30be1f0b8f data\minecraft\tags\blocks\ceiling_hanging_signs.json
+4e62d1cb325c6d0d43e65efff63aff2c64513561 data\minecraft\tags\blocks\wooden_trapdoors.json
+dcb71a11eafa5db071f80eac58dccb699a4006c0 data\minecraft\tags\blocks\wooden_fences.json
+606bbc68e1f016bf3108b99cdeaf06b9ad112b2e data\minecraft\tags\blocks\wooden_slabs.json

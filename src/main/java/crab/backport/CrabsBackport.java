@@ -14,6 +14,8 @@ import crab.backport.world.gen.features.CrabsBackportTreeDecorators;
 import crab.backport.world.loottable.LootTableEditing;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -30,11 +32,13 @@ public class CrabsBackport implements ModInitializer {
     // That way, it's clear which mod wrote info, warnings, and errors.
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
     public static final DefaultParticleType FIREFLY = FabricParticleTypes.simple();
+    public static final DefaultParticleType PALE_OAK_LEAVES = FabricParticleTypes.simple();
 
 
     @Override
     public void onInitialize() {
         Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "firefly"), FIREFLY);
+        Registry.register(Registries.PARTICLE_TYPE, new Identifier(MOD_ID, "pale_oak"), PALE_OAK_LEAVES);
 
         CrabsBackportTreeDecorators.init();
         CrabsBackportFeatures.init();
@@ -48,6 +52,18 @@ public class CrabsBackport implements ModInitializer {
         LootTableEditing.editLootTables();
         PaintingVarientRegistry.registerPaintingVariants();
         CrabsBackportBlockEntities.registerBlockEntities();
+
+        StrippableBlockRegistry.register(CrabsBackportBlocks.PALE_OAK_LOG, CrabsBackportBlocks.STRIPPED_PALE_OAK_LOG);
+        StrippableBlockRegistry.register(CrabsBackportBlocks.PALE_OAK_WOOD, CrabsBackportBlocks.STRIPPED_PALE_OAK_WOOD);
+
+        FlammableBlockRegistry.getDefaultInstance().add(CrabsBackportBlocks.PALE_OAK_LOG, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(CrabsBackportBlocks.STRIPPED_PALE_OAK_LOG, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(CrabsBackportBlocks.PALE_OAK_WOOD, 5, 5);
+        FlammableBlockRegistry.getDefaultInstance().add(CrabsBackportBlocks.STRIPPED_PALE_OAK_WOOD, 5, 5);
+
+        FlammableBlockRegistry.getDefaultInstance().add(CrabsBackportBlocks.PALE_OAK_PLANKS, 5, 20);
+        FlammableBlockRegistry.getDefaultInstance().add(CrabsBackportBlocks.PALE_OAK_LEAVES, 30, 60);
+
 
 
     }

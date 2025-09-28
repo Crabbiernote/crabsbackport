@@ -2,11 +2,15 @@ package crab.backport.block;
 
 import crab.backport.CrabsBackport;
 import crab.backport.sound.CrabsBackportSounds;
+import crab.backport.world.tree.PaleOakSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.type.WoodTypeBuilder;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.Instrument;
 import net.minecraft.block.piston.PistonBehavior;
+import net.minecraft.data.family.BlockFamilies;
+import net.minecraft.data.family.BlockFamily;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -250,8 +254,158 @@ public class CrabsBackportBlocks {
     public static final Block WARPED_SHELF = registerBlock("warped_shelf",
             new ShelfBlock(FabricBlockSettings.create().mapColor(MapColor.OAK_TAN).instrument(Instrument.BASS).sounds(BlockSoundGroup.CHISELED_BOOKSHELF).burnable().strength(2.0F, 3.0F)));
 
+    //PALE OAK
+    public static final Block PALE_OAK_LOG = registerBlock("pale_oak_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_LOG).mapColor(MapColor.STONE_GRAY)));
+    public static final Block STRIPPED_PALE_OAK_LOG = registerBlock("stripped_pale_oak_log",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_LOG).mapColor(MapColor.OFF_WHITE)));
+    public static final Block PALE_OAK_WOOD = registerBlock("pale_oak_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.OAK_WOOD).mapColor(MapColor.STONE_GRAY)));
+    public static final Block STRIPPED_PALE_OAK_WOOD = registerBlock("stripped_pale_oak_wood",
+            new PillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_OAK_WOOD).mapColor(MapColor.OFF_WHITE)));
+    public static final Block PALE_OAK_PLANKS = registerBlock("pale_oak_planks",
+            new Block(FabricBlockSettings.create()
+                    .mapColor(MapColor.OFF_WHITE)
+                    .instrument(Instrument.BASS)
+                    .strength(2.0F, 3.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+    public static final Block PALE_OAK_LEAVES = registerBlock("pale_oak_leaves",
+            new PaleOakLeavesBlock(FabricBlockSettings.create()
+                    .mapColor(MapColor.IRON_GRAY)
+                    .strength(0.2F)
+                    .nonOpaque()
+                    .sounds(BlockSoundGroup.GRASS)
+                    .allowsSpawning(Blocks::canSpawnOnLeaves)
+                    .suffocates(Blocks::never)
+                    .blockVision(Blocks::never )
+                    .burnable()
+                    .ticksRandomly()
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .solidBlock(Blocks::never)));
+
+    public static final Block PALE_OAK_SLAB = registerBlock("pale_oak_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).mapColor(MapColor.OFF_WHITE)
+                    .instrument(Instrument.BASS)
+                    .strength(2.0F, 3.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+    public static final Block PALE_OAK_STAIRS = registerBlock("pale_oak_stairs",
+            new StairsBlock(CrabsBackportBlocks.PALE_OAK_PLANKS.getDefaultState(),
+                    FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).mapColor(MapColor.OFF_WHITE)
+                            .instrument(Instrument.BASS)
+                            .strength(2.0F, 3.0F)
+                            .sounds(BlockSoundGroup.WOOD)
+                            .burnable()));
+    public static final Block PALE_OAK_FENCE = registerBlock("pale_oak_fence",
+            new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE).mapColor(MapColor.OFF_WHITE)
+                    .instrument(Instrument.BASS)
+                    .strength(2.0F, 3.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()));
+
+    public static final Block PALE_OAK_FENCE_GATE = registerBlock("pale_oak_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE).mapColor(MapColor.OFF_WHITE)
+                    .instrument(Instrument.BASS)
+                    .strength(2.0F, 3.0F)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+                    CrabsBackportWoodTypes.PALE_OAK));
+    public static final Block PALE_OAK_BUTTON = registerBlock("pale_oak_button",
+            new ButtonBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON).mapColor(MapColor.OFF_WHITE)
+                    .instrument(Instrument.BASS)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+                    CrabsBackportBlockSetTypes.PALE_OAK,
+                    30,
+                    true));
+    public static final Block PALE_OAK_DOOR = registerBlock("pale_oak_door",
+            new DoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_DOOR).mapColor(MapColor.OFF_WHITE)
+                    .instrument(Instrument.BASS)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable(),
+                    CrabsBackportBlockSetTypes.PALE_OAK));
+
+    public static final Block PALE_OAK_TRAPDOOR = registerBlock("pale_oak_trapdoor",
+            new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.OAK_TRAPDOOR).mapColor(MapColor.OFF_WHITE)
+                    .instrument(Instrument.BASS)
+                    .sounds(BlockSoundGroup.WOOD)
+                    .burnable()
+                    .nonOpaque(),
+                    CrabsBackportBlockSetTypes.PALE_OAK));
+    public static final Block PALE_OAK_PRESSURE_PLATE = registerBlock("pale_oak_pressure_plate",
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE).mapColor(MapColor.OFF_WHITE),
+                    CrabsBackportBlockSetTypes.PALE_OAK));
+
+    public static final Block PALE_OAK_SAPLING = registerBlock("pale_oak_sapling",
+            new SaplingBlock(new PaleOakSaplingGenerator(), FabricBlockSettings.copyOf(Blocks.OAK_SAPLING)));
+    public static final Block POTTED_PALE_OAK_SAPLING = registerBlock("potted_pale_oak_sapling",
+            new FlowerPotBlock(PALE_OAK_SAPLING, FabricBlockSettings.copyOf(Blocks.POTTED_DARK_OAK_SAPLING).nonOpaque()));
+    public static final Block PALE_OAK_SIGN = registerBlockWithoutItem("pale_oak_sign",
+        new PaleOakSignBlock(FabricBlockSettings.create()
+                .mapColor(MapColor.OFF_WHITE)
+                .solid()
+                .noCollision()
+                .instrument(Instrument.BASS)
+                .strength(1.0F)
+                .burnable(),
+                CrabsBackportWoodTypes.PALE_OAK));
+
+    public static final Block PALE_OAK_WALL_SIGN =registerBlockWithoutItem("pale_oak_wall_sign",
+        new PaleOakWallSignBlock(FabricBlockSettings.create()
+                .mapColor(MapColor.OFF_WHITE)
+                .solid()
+                .noCollision()
+                .instrument(Instrument.BASS)
+                .strength(1.0F)
+                .burnable(),
+                CrabsBackportWoodTypes.PALE_OAK));
+
+    public static final Block PALE_OAK_HANGING_SIGN = registerBlockWithoutItem("hanging_pale_oak_sign",
+        new PaleOakHangingSignBlock(FabricBlockSettings.create()
+                .mapColor(MapColor.OFF_WHITE)
+                .solid()
+                .noCollision()
+                .instrument(Instrument.BASS)
+                .strength(1.0F)
+                .burnable(),
+                CrabsBackportWoodTypes.PALE_OAK));
+
+public static final Block PALE_OAK_HANGING_WALL_SIGN = registerBlockWithoutItem("pale_oak_hanging_wall_sign",
+        new PaleOakWallHangingSign(FabricBlockSettings.create()
+                .mapColor(MapColor.OFF_WHITE)
+                .solid()
+                .noCollision()
+                .instrument(Instrument.BASS)
+                .strength(1.0F)
+                .burnable(),
+                CrabsBackportWoodTypes.PALE_OAK));
+//public static final Block PALE_MOSS_BLOCK = registerBlock("pale_moss_block",
+//        new PaleMossBlock(FabricBlockSettings.create()
+//                .burnable()
+//                .mapColor(MapColor.OFF_WHITE)
+//                .strength(0.1F)
+//                .sounds(BlockSoundGroup.MOSS_BLOCK)
+//                .pistonBehavior(PistonBehavior.DESTROY)
+//                .requiresTool()));
+//public static final Block PALE_MOSS_CARPET = registerBlock("pale_moss_carpet",
+//        new PaleMossCarpetBlock(FabricBlockSettings.create()
+//                .burnable()
+//                .mapColor(MapColor.OFF_WHITE)
+//                .strength(0.1F)
+//                .sounds(BlockSoundGroup.MOSS_CARPET)
+//                .pistonBehavior(PistonBehavior.DESTROY)
+//        ));
+
+public static final BlockFamily PALE_OAK_FAMILY = BlockFamilies.register(CrabsBackportBlocks.PALE_OAK_PLANKS)
+        .sign(PALE_OAK_SIGN, PALE_OAK_WALL_SIGN)
+        .group("wooden").unlockCriterionName("has_planks").build();
+
     private static Block registerBlock(String name, Block block) {
         registerBlockItems(name, block);
+        return Registry.register(Registries.BLOCK, new Identifier(CrabsBackport.MOD_ID, name), block);
+    }
+    private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, new Identifier(CrabsBackport.MOD_ID, name), block);
     }
 
@@ -264,4 +418,16 @@ public class CrabsBackportBlocks {
     public static void registerBlocks() {
         CrabsBackport.LOGGER.info("Registering Blocks for " + CrabsBackport.MOD_ID);
     }
+    public static class CrabsBackportWoodTypes{
+        public static final WoodType PALE_OAK = WoodTypeBuilder.copyOf(WoodType.OAK).register(Identifier.of(CrabsBackport.MOD_ID, "pale_oak"), CrabsBackportBlockSetTypes.PALE_OAK);
+    }
+    public static class CrabsBackportBlockSetTypes{
+        public static BlockSetType PALE_OAK =register(new BlockSetType("pale_oak"));
+        public static BlockSetType register(BlockSetType blockSetType){
+            return blockSetType;
+
+        }
+    }
+
 }
+

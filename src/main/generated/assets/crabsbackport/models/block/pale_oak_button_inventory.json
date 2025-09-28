@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "crabsbackport:block/pale_oak_planks"
+  }
+}

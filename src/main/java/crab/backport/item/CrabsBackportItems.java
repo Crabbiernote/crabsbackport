@@ -3,11 +3,10 @@ package crab.backport.item;
 import crab.backport.CrabsBackport;
 import crab.backport.block.CrabsBackportBlocks;
 import crab.backport.sound.CrabsBackportSounds;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.MusicDiscItem;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -39,6 +38,12 @@ public class CrabsBackportItems {
                     CrabsBackportSounds.CREATOR_MUSIC_BOX,
                     new Item.Settings().maxCount(1).rarity(Rarity.RARE),
                     73));
+
+    public static final Item PALE_OAK_SIGN = registerItem("pale_oak_sign",
+            new SignItem(new Item.Settings().maxCount(16), CrabsBackportBlocks.PALE_OAK_SIGN, CrabsBackportBlocks.PALE_OAK_WALL_SIGN));
+
+    public static final Item PALE_OAK_HANGING_SIGN = registerItem("pale_oak_hanging_sign",
+            new HangingSignItem(CrabsBackportBlocks.PALE_OAK_HANGING_SIGN, CrabsBackportBlocks.PALE_OAK_HANGING_WALL_SIGN, new Item.Settings().maxCount(16)));
 
 
     public static Item registerItem(String name, Item item) {

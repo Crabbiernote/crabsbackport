@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "crabsbackport:block/pale_oak_slab"
+    },
+    "type=double": {
+      "model": "crabsbackport:block/pale_oak_planks"
+    },
+    "type=top": {
+      "model": "crabsbackport:block/pale_oak_slab_top"
+    }
+  }
+}

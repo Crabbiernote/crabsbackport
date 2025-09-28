@@ -1,11 +1,14 @@
 package crab.backport.datagen;
 
+import crab.backport.CrabsBackportClient;
 import crab.backport.block.CrabsBackportBlocks;
+import crab.backport.item.CrabsBackportItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.Models;
 
 public class CrabsBackportModelProvider extends FabricModelProvider {
     public CrabsBackportModelProvider(FabricDataOutput output) {
@@ -14,52 +17,28 @@ public class CrabsBackportModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        BlockStateModelGenerator.BlockTexturePool tuffpool = blockStateModelGenerator.registerCubeAllModelTexturePool(Blocks.TUFF);
-        tuffpool.stairs(CrabsBackportBlocks.TUFF_STAIRS);
-        tuffpool.wall(CrabsBackportBlocks.TUFF_WALLS);
-        tuffpool.slab(CrabsBackportBlocks.TUFF_SLAB);
+        BlockStateModelGenerator.BlockTexturePool paleoakpool = blockStateModelGenerator.registerCubeAllModelTexturePool(CrabsBackportBlocks.PALE_OAK_PLANKS);
+        paleoakpool.family(CrabsBackportBlocks.PALE_OAK_FAMILY);
+        paleoakpool.stairs(CrabsBackportBlocks.PALE_OAK_STAIRS);
+        paleoakpool.slab(CrabsBackportBlocks.PALE_OAK_SLAB);
+        paleoakpool.button(CrabsBackportBlocks.PALE_OAK_BUTTON);
+        paleoakpool.fence(CrabsBackportBlocks.PALE_OAK_FENCE);
+        paleoakpool.fenceGate(CrabsBackportBlocks.PALE_OAK_FENCE_GATE);
+        paleoakpool.pressurePlate(CrabsBackportBlocks.PALE_OAK_PRESSURE_PLATE);
+        blockStateModelGenerator.registerLog(CrabsBackportBlocks.PALE_OAK_LOG).log(CrabsBackportBlocks.PALE_OAK_LOG).wood(CrabsBackportBlocks.PALE_OAK_WOOD);
+        blockStateModelGenerator.registerLog(CrabsBackportBlocks.STRIPPED_PALE_OAK_LOG).log(CrabsBackportBlocks.STRIPPED_PALE_OAK_LOG).wood(CrabsBackportBlocks.STRIPPED_PALE_OAK_WOOD);
+        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.PALE_OAK_LEAVES);
+        blockStateModelGenerator.registerHangingSign(
+                CrabsBackportBlocks.STRIPPED_PALE_OAK_LOG,
+                CrabsBackportBlocks.PALE_OAK_HANGING_SIGN,
+                CrabsBackportBlocks.PALE_OAK_HANGING_WALL_SIGN
+        );
+        blockStateModelGenerator.registerDoor(CrabsBackportBlocks.PALE_OAK_DOOR);
+        blockStateModelGenerator.registerOrientableTrapdoor(CrabsBackportBlocks.PALE_OAK_TRAPDOOR);
+        blockStateModelGenerator.registerFlowerPotPlant(CrabsBackportBlocks.PALE_OAK_SAPLING, CrabsBackportBlocks.POTTED_PALE_OAK_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
+//        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.PALE_MOSS_BLOCK);
+//        blockStateModelGenerator.registerWoolAndCarpet(CrabsBackportBlocks.PALE_MOSS_BLOCK, CrabsBackportBlocks.PALE_MOSS_CARPET);
 
-        BlockStateModelGenerator.BlockTexturePool polishedtuffpool = blockStateModelGenerator.registerCubeAllModelTexturePool(CrabsBackportBlocks.POLISHED_TUFF);
-        polishedtuffpool.stairs(CrabsBackportBlocks.POLISHED_TUFF_STAIRS);
-        polishedtuffpool.wall(CrabsBackportBlocks.POLISHED_TUFF_WALLS);
-        polishedtuffpool.slab(CrabsBackportBlocks.POLISHED_TUFF_SLAB);
-        BlockStateModelGenerator.BlockTexturePool tuffbrickpool = blockStateModelGenerator.registerCubeAllModelTexturePool(CrabsBackportBlocks.TUFF_BRICKS);
-        tuffbrickpool.stairs(CrabsBackportBlocks.TUFF_BRICK_STAIRS);
-        tuffbrickpool.wall(CrabsBackportBlocks.TUFF_BRICK_WALLS);
-        tuffbrickpool.slab(CrabsBackportBlocks.TUFF_BRICK_SLAB);
-
-        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.CHISELED_COPPER);
-        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.WEATHERED_CHISELED_COPPER);
-        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.EXPOSED_CHISELED_COPPER);
-        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.OXIDIZED_CHISELED_COPPER);
-        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.WAXED_CHISELED_COPPER);
-        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.WAXED_EXPOSED_CHISELED_COPPER);
-        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.WAXED_OXIDIZED_CHISELED_COPPER);
-        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.WAXED_WEATHERED_CHISELED_COPPER);
-        blockStateModelGenerator.registerTrapdoor(CrabsBackportBlocks.COPPER_TRAPDOOR);
-        blockStateModelGenerator.registerTrapdoor(CrabsBackportBlocks.WAXED_COPPER_TRAPDOOR);
-        blockStateModelGenerator.registerTrapdoor(CrabsBackportBlocks.EXPOSED_COPPER_TRAPDOOR);
-        blockStateModelGenerator.registerTrapdoor(CrabsBackportBlocks.WAXED_EXPOSED_COPPER_TRAPDOOR);
-        blockStateModelGenerator.registerTrapdoor(CrabsBackportBlocks.OXIDIZED_COPPER_TRAPDOOR);
-        blockStateModelGenerator.registerTrapdoor(CrabsBackportBlocks.WAXED_OXIDIZED_COPPER_TRAPDOOR);
-        blockStateModelGenerator.registerTrapdoor(CrabsBackportBlocks.WEATHERED_COPPER_TRAPDOOR);
-        blockStateModelGenerator.registerTrapdoor(CrabsBackportBlocks.WAXED_WEATHERED_COPPER_TRAPDOOR);
-        blockStateModelGenerator.registerDoor(CrabsBackportBlocks.COPPER_DOOR);
-        blockStateModelGenerator.registerDoor(CrabsBackportBlocks.WAXED_COPPER_DOOR);
-        blockStateModelGenerator.registerDoor(CrabsBackportBlocks.EXPOSED_COPPER_DOOR);
-        blockStateModelGenerator.registerDoor(CrabsBackportBlocks.WAXED_EXPOSED_COPPER_DOOR);
-        blockStateModelGenerator.registerDoor(CrabsBackportBlocks.OXIDIZED_COPPER_DOOR);
-        blockStateModelGenerator.registerDoor(CrabsBackportBlocks.WAXED_OXIDIZED_COPPER_DOOR);
-        blockStateModelGenerator.registerDoor(CrabsBackportBlocks.WEATHERED_COPPER_DOOR);
-        blockStateModelGenerator.registerDoor(CrabsBackportBlocks.WAXED_WEATHERED_COPPER_DOOR);
-        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.COPPER_GRATE);
-        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.WAXED_COPPER_GRATE);
-        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.EXPOSED_COPPER_GRATE);
-        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.WAXED_EXPOSED_COPPER_GRATE);
-        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.OXIDIZED_COPPER_GRATE);
-        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.WAXED_OXIDIZED_COPPER_GRATE);
-        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.WEATHERED_COPPER_GRATE);
-        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.WAXED_WEATHERED_COPPER_GRATE);
 
 
     }

@@ -37,6 +37,7 @@ public class CrabsbackportVegetationGeneration {
         //            GenerationStep.Feature.VEGETAL_DECORATION, CrabsbackportPlacedFeatures.FALLEN_JUNGLE_TREE);
 
         // I'll fix this later i just really cant be bothered to do it rn
+        //i gave up on this lol imma still keep it in lemme know if you see this
 
 
     }

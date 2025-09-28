@@ -28,6 +28,17 @@ public class CrabsBackportBlockEntities {
                     CrabsBackportBlocks.SPRUCE_SHELF,
                     CrabsBackportBlocks.WARPED_SHELF
             );
+    public static final BlockEntityType<PaleOakSignBlockEntity> PALE_OAK_SIGN_BLOCK_ENTITY =
+            registerBlockEntity("pale_oak_sign_block_entity",
+                    PaleOakSignBlockEntity::new,
+                    CrabsBackportBlocks.PALE_OAK_SIGN,
+                    CrabsBackportBlocks.PALE_OAK_WALL_SIGN);
+
+    public static final BlockEntityType<PaleOakHangingSignBlockEntity> PALE_OAK_HANGING_SIGN_BLOCK_ENTITY =
+            registerBlockEntity("pale_oak_hanging_sign_block_entity",
+                    PaleOakHangingSignBlockEntity::new,
+                    CrabsBackportBlocks.PALE_OAK_HANGING_SIGN,
+                    CrabsBackportBlocks.PALE_OAK_HANGING_WALL_SIGN);
 
     private static <T extends BlockEntity> BlockEntityType<T> registerBlockEntity(String name, FabricBlockEntityTypeBuilder.Factory<T> blockEntityType, Block... block) {
         return Registry.register(Registries.BLOCK_ENTITY_TYPE, new Identifier(CrabsBackport.MOD_ID, name),

@@ -20,8 +20,6 @@
   "block.crabsbackport.tuff_walls": "Tuff Wall",
 
 
-
-
   "block.crabsbackport.chiseled_tuff": "Chiseled Tuff",
   "block.crabsbackport.chiseled_tuff_bricks": "Chiseled Tuff Bricks",
   "block.crabsbackport.polished_tuff": "Polished Tuff",
@@ -84,6 +82,26 @@
   "block.crabsbackport.pale_oak_shelf": "Pale Oak Shelf",
   "block.crabsbackport.spruce_shelf": "Spruce Shelf",
   "block.crabsbackport.warped_shelf": "Warped Shelf",
+
+  "block.crabsbackport.pale_oak_log": "Pale Oak Log",
+  "block.crabsbackport.pale_oak_wood": "Pale Oak Wood",
+  "block.crabsbackport.pale_oak_planks": "Pale Oak Planks",
+  "block.crabsbackport.pale_oak_stairs": "Pale Oak Stairs",
+  "block.crabsbackport.pale_oak_slab": "Pale Oak Slab",
+  "block.crabsbackport.pale_oak_leaves": "Pale Oak Leaves",
+  "block.crabsbackport.pale_oak_button": "Pale Oak Button",
+  "block.crabsbackport.pale_oak_pressure_plate": "Pale Oak Pressure Plate",
+  "block.crabsbackport.pale_oak_fence": "Pale Oak Fence",
+  "block.crabsbackport.pale_oak_fence_gate": "Pale Oak Fence Gate",
+  "block.crabsbackport.pale_oak_door": "Pale Oak Door",
+  "block.crabsbackport.pale_oak_trapdoor": "Pale Oak Trapdoor",
+  "block.crabsbackport.hanging_pale_oak_sign": "Pale Oak Hanging Sign",
+  "block.crabsbackport.pale_oak_sign": "Pale Oak Sign",
+  "block.crabsbackport.pale_oak_sapling": "Pale Oak Sapling",
+  "block.crabsbackport.stripped_pale_oak_log": "Stripped Pale Oak Log",
+  "block.crabsbackport.stripped_pale_oak_wood": "Stripped Pale Oak Wood",
+
+  "#crabsbackport:pale_oak_logs": "Pale Oak Logs",
 
   "sounds.crabsbackport.block.copper_door.open": "Door creaks",
   "sounds.crabsbackport.block.copper_door.close": "Door creaks",

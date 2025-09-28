@@ -11,19 +11,24 @@ public class CrabsBackportLootTableProvider extends FabricBlockLootTableProvider
 
     @Override
     public void generate() {
-        addDrop(CrabsBackportBlocks.OAK_SHELF);
-        addDrop(CrabsBackportBlocks.ACACIA_SHELF);
-        addDrop(CrabsBackportBlocks.BAMBOO_SHELF);
-        addDrop(CrabsBackportBlocks.BIRCH_SHELF);
-        addDrop(CrabsBackportBlocks.CHERRY_SHELF);
-        addDrop(CrabsBackportBlocks.CRIMSON_SHELF);
-        addDrop(CrabsBackportBlocks.DARK_OAK_SHELF);
-        addDrop(CrabsBackportBlocks.JUNGLE_SHELF);
-        addDrop(CrabsBackportBlocks.MANGROVE_SHELF);
-        addDrop(CrabsBackportBlocks.PALE_OAK_SHELF);
-        addDrop(CrabsBackportBlocks.SPRUCE_SHELF);
-        addDrop(CrabsBackportBlocks.WARPED_SHELF);
-
+        addDrop(CrabsBackportBlocks.PALE_OAK_LOG);
+        addDrop(CrabsBackportBlocks.STRIPPED_PALE_OAK_LOG);
+        addDrop(CrabsBackportBlocks.PALE_OAK_WOOD);
+        addDrop(CrabsBackportBlocks.STRIPPED_PALE_OAK_WOOD);
+        addDrop(CrabsBackportBlocks.PALE_OAK_PLANKS);
+        addDrop(CrabsBackportBlocks.PALE_OAK_LEAVES, leavesDrops(CrabsBackportBlocks.PALE_OAK_LEAVES, CrabsBackportBlocks.PALE_OAK_SAPLING, 0.05F, 0.0625F, 0.083333336F, 0.1F));
+        addDrop(CrabsBackportBlocks.PALE_OAK_SIGN);
+        addDrop(CrabsBackportBlocks.PALE_OAK_SAPLING);
+        addDrop(CrabsBackportBlocks.PALE_OAK_HANGING_SIGN);
+        addDrop(CrabsBackportBlocks.PALE_OAK_TRAPDOOR);
+        doorDrops(CrabsBackportBlocks.PALE_OAK_DOOR);
+        addDrop(CrabsBackportBlocks.PALE_OAK_FENCE);
+        addDrop(CrabsBackportBlocks.PALE_OAK_FENCE_GATE);
+        addDrop(CrabsBackportBlocks.PALE_OAK_STAIRS);
+        slabDrops(CrabsBackportBlocks.PALE_OAK_SLAB);
+        addDrop(CrabsBackportBlocks.PALE_OAK_BUTTON);
+        addDrop(CrabsBackportBlocks.PALE_OAK_PRESSURE_PLATE);
+        addPottedPlantDrops(CrabsBackportBlocks.POTTED_PALE_OAK_SAPLING);
 
     }
 }

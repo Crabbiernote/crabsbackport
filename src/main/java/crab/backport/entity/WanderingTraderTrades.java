@@ -1,5 +1,6 @@
 package crab.backport.entity;
 
+import crab.backport.block.CrabsBackportBlocks;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -14,6 +15,13 @@ public class WanderingTraderTrades {
                     new ItemStack(Items.HAY_BLOCK, 1),
                     new ItemStack(Items.EMERALD, 1),
                     2, 1, 0.065f
+            ));
+        });
+        TradeOfferHelper.registerWanderingTraderOffers(1, factories -> {
+            factories.add((entity, random) -> new TradeOffer(
+                    new ItemStack(Items.EMERALD, 5),
+                    new ItemStack(CrabsBackportBlocks.PALE_OAK_SAPLING, 1),
+                    8, 1, 0.065f
             ));
         });
 

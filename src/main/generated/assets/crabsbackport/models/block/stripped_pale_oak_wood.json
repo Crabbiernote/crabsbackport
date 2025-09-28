@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "crabsbackport:block/stripped_pale_oak_log",
+    "side": "crabsbackport:block/stripped_pale_oak_log"
+  }
+}

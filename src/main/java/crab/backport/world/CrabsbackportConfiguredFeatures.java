@@ -3,14 +3,21 @@ package crab.backport.world;
 import crab.backport.CrabsBackport;
 import crab.backport.block.CrabsBackportBlocks;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DataPool;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.size.ThreeLayersFeatureSize;
+import net.minecraft.world.gen.foliage.DarkOakFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
+import net.minecraft.world.gen.trunk.DarkOakTrunkPlacer;
+
+import java.util.OptionalInt;
 
 public class CrabsbackportConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> BUSH_KEY = registerKey("bush");
@@ -23,6 +30,8 @@ public class CrabsbackportConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_OAK_TREE = registerKey("fallen_oak_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_SPRUCE_TREE = registerKey("fallen_spruce_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_JUNGLE_TREE = registerKey("fallen_jungle_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PALE_OAK_BONEMEAL_KEY = registerKey("pale_oak_bonemeal");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PALE_MOSS_PATCH_BONEMEAL = registerKey("pale_oak_bonemeal");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         register(context,
@@ -63,6 +72,19 @@ public class CrabsbackportConfiguredFeatures {
                                 .add(CrabsBackportBlocks.SHORT_DRY_GRASS.getDefaultState(), 1)),
                         64
                 ));
+        register(context,
+                PALE_OAK_BONEMEAL_KEY,
+                Feature.TREE,
+                new TreeFeatureConfig.Builder(
+                        BlockStateProvider.of(Blocks.DARK_OAK_LOG),
+                        new DarkOakTrunkPlacer(6, 2, 1),
+                        BlockStateProvider.of(Blocks.DARK_OAK_LEAVES),
+                        new DarkOakFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0)),
+                        new ThreeLayersFeatureSize(1, 1, 0, 1, 2, OptionalInt.empty())
+                )
+                        .ignoreVines()
+                        .build()
+        );
 
     }
 

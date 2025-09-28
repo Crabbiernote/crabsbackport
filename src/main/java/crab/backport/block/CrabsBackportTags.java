@@ -13,6 +13,7 @@ public class CrabsBackportTags {
                 createTag("dry_vegetation_may_place_on");
         public static final TagKey<Block> WOODEN_SHELVES =
                 createTag("wooden_shelves");
+
     }
 
     public static TagKey<Block> createTag(String name) {
@@ -21,6 +22,8 @@ public class CrabsBackportTags {
 
 
     public static class Items {
+        public static final TagKey<Item> PALE_OAK_LOGS =
+                createTag("pale_oak_logs");
         public static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, new Identifier(CrabsBackport.MOD_ID, name));
         }

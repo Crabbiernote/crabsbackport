@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "X": {
+      "item": "crabsbackport:stripped_pale_oak_log"
+    }
+  },
+  "pattern": [
+    "XXX",
+    "   ",
+    "XXX"
+  ],
+  "result": {
+    "item": "crabsbackport:pale_oak_shelf",
+    "count": 6
+  },
+  "show_notification": true
+}

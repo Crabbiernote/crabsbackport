@@ -24,6 +24,26 @@ public class CrabsBackportItemGroups {
                         entries.add(CrabsBackportBlocks.LEAF_LITTER);
                         entries.add(CrabsBackportBlocks.CACTUS_FLOWER);
 
+                        entries.add(CrabsBackportBlocks.PALE_OAK_LOG);
+                        entries.add(CrabsBackportBlocks.STRIPPED_PALE_OAK_LOG);
+                        entries.add(CrabsBackportBlocks.PALE_OAK_WOOD);
+                        entries.add(CrabsBackportBlocks.STRIPPED_PALE_OAK_WOOD);
+                        entries.add(CrabsBackportBlocks.PALE_OAK_PLANKS);
+                        entries.add(CrabsBackportBlocks.PALE_OAK_LEAVES);
+                        entries.add(CrabsBackportBlocks.PALE_OAK_SAPLING);
+                        entries.add(CrabsBackportBlocks.PALE_OAK_DOOR);
+                        entries.add(CrabsBackportBlocks.PALE_OAK_TRAPDOOR);
+                        entries.add(CrabsBackportBlocks.PALE_OAK_FENCE);
+                        entries.add(CrabsBackportBlocks.PALE_OAK_FENCE_GATE);
+                        entries.add(CrabsBackportBlocks.PALE_OAK_PRESSURE_PLATE);
+                        entries.add(CrabsBackportBlocks.PALE_OAK_BUTTON);
+                        entries.add(CrabsBackportItems.PALE_OAK_SIGN);
+                        entries.add(CrabsBackportItems.PALE_OAK_HANGING_SIGN);
+                        entries.add(CrabsBackportBlocks.PALE_OAK_SLAB);
+                        entries.add(CrabsBackportBlocks.PALE_OAK_STAIRS);
+
+
+
                         entries.add(CrabsBackportBlocks.ACACIA_SHELF);
                         entries.add(CrabsBackportBlocks.BIRCH_SHELF);
                         entries.add(CrabsBackportBlocks.BAMBOO_SHELF);

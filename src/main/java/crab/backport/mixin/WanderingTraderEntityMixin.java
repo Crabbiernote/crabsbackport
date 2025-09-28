@@ -20,6 +20,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(WanderingTraderEntity.class)
 public class WanderingTraderEntityMixin extends MerchantEntity {
+    //UNUSED IT WAS ANNOYING AND CAUSED COMPAT ISSUES
 
     @Unique
     protected final Random random = Random.create();
