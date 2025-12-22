@@ -1,6 +1,8 @@
 {
   "replace": false,
     "values": [
-      "crabsbackport:pale_oak_leaves"
+      "crabsbackport:pale_oak_leaves",
+      "crabsbackport:pale_moss_carpet",
+      "crabsbackport:pale_moss_block"
       ]
 }

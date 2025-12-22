@@ -65,6 +65,7 @@ public class CrabsBackportClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(CrabsBackportBlocks.PALE_OAK_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(CrabsBackportBlocks.PALE_OAK_TRAPDOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(CrabsBackportBlocks.PALE_OAK_SAPLING, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(CrabsBackportBlocks.PALE_HANGING_MOSS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(CrabsBackportBlocks.POTTED_PALE_OAK_SAPLING, RenderLayer.getCutout());
         ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
             if (world == null || pos == null) {

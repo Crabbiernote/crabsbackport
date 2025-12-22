@@ -3,11 +3,8 @@
   "package": "crab.backport.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "ArrayVoxelShapeAccessor",
     "CactusFlowerMixin",
-    "ExampleMixin",
-    "SimpleVoxelShapeAccessor",
-    "VoxelShapeAccessor"
+    "ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1

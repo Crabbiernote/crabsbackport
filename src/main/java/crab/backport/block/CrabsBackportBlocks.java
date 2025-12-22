@@ -397,6 +397,16 @@ public static final Block PALE_MOSS_CARPET = registerBlock("pale_moss_carpet",
                 .pistonBehavior(PistonBehavior.DESTROY)
         ));
 
+    public static final Block PALE_HANGING_MOSS = registerBlock("pale_hanging_moss",
+            new HangingMossBlock(FabricBlockSettings.create()
+                    .burnable()
+                    .mapColor(MapColor.OFF_WHITE)
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.MOSS_CARPET)
+                    .pistonBehavior(PistonBehavior.DESTROY)
+                    .noCollision()
+            ));
+
 public static final BlockFamily PALE_OAK_FAMILY = BlockFamilies.register(CrabsBackportBlocks.PALE_OAK_PLANKS)
         .sign(PALE_OAK_SIGN, PALE_OAK_WALL_SIGN)
         .group("wooden").unlockCriterionName("has_planks").build();

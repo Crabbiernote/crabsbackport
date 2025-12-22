@@ -48,6 +48,7 @@ public class CrabsBackportSounds {
     public static final SoundEvent BLOCK_COPPER_BULB_PLACE = registerSoundEvent("block.copper_bulb.place");
     public static final SoundEvent BLOCK_COPPER_BULB_HIT = registerSoundEvent("block.copper_bulb.hit");
     public static final SoundEvent BLOCK_COPPER_BULB_FALL = registerSoundEvent("block.copper_bulb.fall");
+    public static final SoundEvent PALE_HANGING_MOSS_IDLE = registerSoundEvent("block.pale_hanging_moss.idle");
 
     public static final BlockSoundGroup LEAF_LITTER_SOUNDS = new BlockSoundGroup(1.0F, 0.8F,
             CrabsBackportSounds.BLOCK_LEAF_LITTER_BREAK,

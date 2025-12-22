@@ -138,6 +138,38 @@ public class WanderingTraderTrades {
             ));
         });
 
+        TradeOfferHelper.registerWanderingTraderOffers(1, factories -> {
+            factories.add((entity, random) -> new TradeOffer(
+                    new ItemStack(Items.EMERALD, 1),
+                    new ItemStack(CrabsBackportBlocks.PALE_MOSS_BLOCK, 2),
+                    5, 1, 0.065f
+            ));
+        });
+
+        TradeOfferHelper.registerWanderingTraderOffers(1, factories -> {
+            factories.add((entity, random) -> new TradeOffer(
+                    new ItemStack(Items.EMERALD, 1),
+                    new ItemStack(CrabsBackportBlocks.WILDFLOWERS, 1),
+                    12, 1, 0.065f
+            ));
+        });
+
+        TradeOfferHelper.registerWanderingTraderOffers(1, factories -> {
+            factories.add((entity, random) -> new TradeOffer(
+                    new ItemStack(Items.EMERALD, 1),
+                    new ItemStack(CrabsBackportBlocks.TALL_DRY_GRASS, 1),
+                    12, 1, 0.065f
+            ));
+        });
+
+        TradeOfferHelper.registerWanderingTraderOffers(1, factories -> {
+            factories.add((entity, random) -> new TradeOffer(
+                    new ItemStack(Items.EMERALD, 3),
+                    new ItemStack(CrabsBackportBlocks.FIREFLY_BUSH, 1),
+                    12, 1, 0.065f
+            ));
+        });
+
 
     }
 }

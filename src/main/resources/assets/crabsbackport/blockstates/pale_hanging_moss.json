@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "bottom=false": {
+      "model": "crabsbackport:block/pale_hanging_moss"
+    },
+    "bottom=true": {
+      "model": "crabsbackport:block/pale_hanging_moss_tip"
+    }
+  }
+}

@@ -23,6 +23,7 @@
         "crabsbackport:pale_oak_button",
         "crabsbackport:pale_oak_pressure_plate",
         "crabsbackport:pale_oak_sign",
-        "crabsbackport:pale_oak_hanging_sign"
+        "crabsbackport:hanging_pale_oak_sign",
+      "crabsbackport:pale_oak_hanging_wall_sign"
     ]
 }

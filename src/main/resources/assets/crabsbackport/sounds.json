@@ -327,5 +327,25 @@
         "sounds": [
         "crabsbackport:copper_bulb_turn_off"
         ]
-    }
+    },
+  "block.pale_hanging_moss.idle": {
+    "subtitle": "sounds.crabsbackport.block.pale_hanging_moss.idle",
+    "sounds": [
+      "crabsbackport:pale_hanging_moss1",
+      "crabsbackport:pale_hanging_moss2",
+      "crabsbackport:pale_hanging_moss3",
+      "crabsbackport:pale_hanging_moss4",
+      "crabsbackport:pale_hanging_moss5",
+        "crabsbackport:pale_hanging_moss6",
+        "crabsbackport:pale_hanging_moss7",
+        "crabsbackport:pale_hanging_moss8",
+        "crabsbackport:pale_hanging_moss9",
+        "crabsbackport:pale_hanging_moss10",
+        "crabsbackport:pale_hanging_moss11",
+        "crabsbackport:pale_hanging_moss12",
+        "crabsbackport:pale_hanging_moss13",
+        "crabsbackport:pale_hanging_moss14",
+        "crabsbackport:pale_hanging_moss15"
+    ]
+  }
 }

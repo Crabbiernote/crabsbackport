@@ -13,6 +13,8 @@ public class CrabsBackportTags {
                 createTag("dry_vegetation_may_place_on");
         public static final TagKey<Block> WOODEN_SHELVES =
                 createTag("wooden_shelves");
+        public static final TagKey<Block> PALE_OAK_LOGS =
+                createTag("pale_oak_logs");
 
     }
 
