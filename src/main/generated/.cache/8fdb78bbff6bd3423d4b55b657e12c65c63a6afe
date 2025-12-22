@@ -1,4 +1,4 @@
-// 1.20.1	2025-09-28T13:20:32.7734174	Crab's Backport/Tags for minecraft:item
+// 1.20.1	2025-10-30T23:37:42.0031157	Crab's Backport/Tags for minecraft:item
 246a384efe01a85ed0f335d170da462807e3713f data\minecraft\tags\items\planks.json
 4e62d1cb325c6d0d43e65efff63aff2c64513561 data\minecraft\tags\items\wooden_trapdoors.json
 dcb71a11eafa5db071f80eac58dccb699a4006c0 data\minecraft\tags\items\wooden_fences.json
@@ -10,5 +10,5 @@ b2ad556e0e0fa0ec6424086f574fdc07f4dfe448 data\minecraft\tags\items\hanging_signs
 606bbc68e1f016bf3108b99cdeaf06b9ad112b2e data\minecraft\tags\items\wooden_slabs.json
 e2bc96c79aed788a02044ab27a814a3453402565 data\minecraft\tags\items\logs_that_burn.json
 696bc1b08bdfbfcf467a95c0b95e61a98950588f data\minecraft\tags\items\wooden_pressure_plates.json
-355c823fe7827e9954fa04869a58a240f82b1889 data\minecraft\tags\items\wooden_doors.json
 77f5aa4c7e6d73ea1acc17f71f5d0b2b807d77f8 data\minecraft\tags\items\signs.json
+355c823fe7827e9954fa04869a58a240f82b1889 data\minecraft\tags\items\wooden_doors.json

@@ -45,6 +45,15 @@
     "crabsbackport:oxidized_copper_bulb",
     "crabsbackport:waxed_oxidized_copper_bulb",
     "crabsbackport:weathered_copper_bulb",
-    "crabsbackport:waxed_weathered_copper_bulb"
+    "crabsbackport:waxed_weathered_copper_bulb",
+    "crabsbackport:copper_door",
+    "crabsbackport:waxed_copper_door",
+    "crabsbackport:exposed_copper_door",
+    "crabsbackport:waxed_exposed_copper_door",
+    "crabsbackport:oxidized_copper_door",
+    "crabsbackport:waxed_oxidized_copper_door",
+    "crabsbackport:weathered_copper_door",
+    "crabsbackport:waxed_weathered_copper_door"
+
   ]
 }

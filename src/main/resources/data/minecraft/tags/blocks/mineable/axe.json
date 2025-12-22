@@ -1,0 +1,28 @@
+{
+  "replace": false,
+    "values": [
+      "crabsbackport:oak_shelf",
+        "crabsbackport:spruce_shelf",
+        "crabsbackport:birch_shelf",
+        "crabsbackport:jungle_shelf",
+        "crabsbackport:acacia_shelf",
+        "crabsbackport:dark_oak_shelf",
+        "crabsbackport:mangrove_shelf",
+        "crabsbackport:cherry_shelf",
+        "crabsbackport:bamboo_shelf",
+        "crabsbackport:crimson_shelf",
+        "crabsbackport:warped_shelf",
+        "crabsbackport:pale_oak_shelf",
+        "crabsbackport:pale_oak_planks",
+        "crabsbackport:pale_oak_slab",
+        "crabsbackport:pale_oak_stairs",
+        "crabsbackport:pale_oak_fence",
+        "crabsbackport:pale_oak_fence_gate",
+        "crabsbackport:pale_oak_door",
+        "crabsbackport:pale_oak_trapdoor",
+        "crabsbackport:pale_oak_button",
+        "crabsbackport:pale_oak_pressure_plate",
+        "crabsbackport:pale_oak_sign",
+        "crabsbackport:pale_oak_hanging_sign"
+    ]
+}

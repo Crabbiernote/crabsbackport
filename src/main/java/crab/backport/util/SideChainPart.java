@@ -1,4 +1,4 @@
-package crab.backport.block;
+package crab.backport.util;
 
 import net.minecraft.util.StringIdentifiable;
 

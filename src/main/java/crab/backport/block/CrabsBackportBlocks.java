@@ -380,22 +380,22 @@ public static final Block PALE_OAK_HANGING_WALL_SIGN = registerBlockWithoutItem(
                 .strength(1.0F)
                 .burnable(),
                 CrabsBackportWoodTypes.PALE_OAK));
-//public static final Block PALE_MOSS_BLOCK = registerBlock("pale_moss_block",
-//        new PaleMossBlock(FabricBlockSettings.create()
-//                .burnable()
-//                .mapColor(MapColor.OFF_WHITE)
-//                .strength(0.1F)
-//                .sounds(BlockSoundGroup.MOSS_BLOCK)
-//                .pistonBehavior(PistonBehavior.DESTROY)
-//                .requiresTool()));
-//public static final Block PALE_MOSS_CARPET = registerBlock("pale_moss_carpet",
-//        new PaleMossCarpetBlock(FabricBlockSettings.create()
-//                .burnable()
-//                .mapColor(MapColor.OFF_WHITE)
-//                .strength(0.1F)
-//                .sounds(BlockSoundGroup.MOSS_CARPET)
-//                .pistonBehavior(PistonBehavior.DESTROY)
-//        ));
+public static final Block PALE_MOSS_BLOCK = registerBlock("pale_moss_block",
+        new PaleMossBlock(FabricBlockSettings.create()
+                .burnable()
+                .mapColor(MapColor.OFF_WHITE)
+                .strength(0.1F)
+                .sounds(BlockSoundGroup.MOSS_BLOCK)
+                .pistonBehavior(PistonBehavior.DESTROY)
+                .requiresTool()));
+public static final Block PALE_MOSS_CARPET = registerBlock("pale_moss_carpet",
+        new CarpetBlock(FabricBlockSettings.create()
+                .burnable()
+                .mapColor(MapColor.OFF_WHITE)
+                .strength(0.1F)
+                .sounds(BlockSoundGroup.MOSS_CARPET)
+                .pistonBehavior(PistonBehavior.DESTROY)
+        ));
 
 public static final BlockFamily PALE_OAK_FAMILY = BlockFamilies.register(CrabsBackportBlocks.PALE_OAK_PLANKS)
         .sign(PALE_OAK_SIGN, PALE_OAK_WALL_SIGN)

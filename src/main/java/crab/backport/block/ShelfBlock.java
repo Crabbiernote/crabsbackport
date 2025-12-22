@@ -1,8 +1,11 @@
 package crab.backport.block;
 
-import crab.backport.block.entity.ListInventory;
+import crab.backport.util.ListInventory;
 import crab.backport.block.entity.ShelfBlockEntity;
 import crab.backport.sound.CrabsBackportSounds;
+import crab.backport.util.InteractibleSlotContainer;
+import crab.backport.util.SideChainPart;
+import crab.backport.util.SideChaining;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;

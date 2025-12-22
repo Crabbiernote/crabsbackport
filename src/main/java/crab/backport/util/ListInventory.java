@@ -1,4 +1,4 @@
-package crab.backport.block.entity;
+package crab.backport.util;
 
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;

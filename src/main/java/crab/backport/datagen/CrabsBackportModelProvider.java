@@ -36,8 +36,7 @@ public class CrabsBackportModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoor(CrabsBackportBlocks.PALE_OAK_DOOR);
         blockStateModelGenerator.registerOrientableTrapdoor(CrabsBackportBlocks.PALE_OAK_TRAPDOOR);
         blockStateModelGenerator.registerFlowerPotPlant(CrabsBackportBlocks.PALE_OAK_SAPLING, CrabsBackportBlocks.POTTED_PALE_OAK_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
-//        blockStateModelGenerator.registerSimpleCubeAll(CrabsBackportBlocks.PALE_MOSS_BLOCK);
-//        blockStateModelGenerator.registerWoolAndCarpet(CrabsBackportBlocks.PALE_MOSS_BLOCK, CrabsBackportBlocks.PALE_MOSS_CARPET);
+        blockStateModelGenerator.registerWoolAndCarpet(CrabsBackportBlocks.PALE_MOSS_BLOCK, CrabsBackportBlocks.PALE_MOSS_CARPET);
 
 
 

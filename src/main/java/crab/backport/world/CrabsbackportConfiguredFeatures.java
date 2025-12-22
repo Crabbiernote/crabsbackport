@@ -31,7 +31,8 @@ public class CrabsbackportConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_SPRUCE_TREE = registerKey("fallen_spruce_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> FALLEN_JUNGLE_TREE = registerKey("fallen_jungle_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> PALE_OAK_BONEMEAL_KEY = registerKey("pale_oak_bonemeal");
-    public static final RegistryKey<ConfiguredFeature<?, ?>> PALE_MOSS_PATCH_BONEMEAL = registerKey("pale_oak_bonemeal");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PALE_MOSS_PATCH_VEGETATION = registerKey("pale_moss_vegetation");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PALE_MOSS_PATCH_BONEMEAL = registerKey("pale_moss_bonemeal");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         register(context,

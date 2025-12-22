@@ -1,4 +1,4 @@
-package crab.backport.block;
+package crab.backport.util;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
