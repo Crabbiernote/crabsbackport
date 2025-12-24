@@ -1,8 +1,10 @@
 package crab.backport.world.loottable;
 
+import crab.backport.block.CrabsBackportBlocks;
 import crab.backport.item.CrabsBackportItems;
 import net.fabricmc.fabric.api.loot.v2.LootTableEvents;
 import net.minecraft.entity.EntityType;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.DamageSourcePropertiesLootCondition;
@@ -42,6 +44,8 @@ public class LootTableEditing {
             new Identifier("minecraft", "entities/zombie");
     public static final Identifier GHAST =
             new Identifier("minecraft", "entities/ghast");
+    public static final Identifier SNIFFER_DIGGING =
+            new Identifier("minecraft", "gameplay/sniffer_digging");
 
     public static void editLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
@@ -137,7 +141,12 @@ public class LootTableEditing {
                         .apply(SetCountLootFunction.builder(UniformLootNumberProvider.create(1.0f, 1.0f)).build());
                 tableBuilder.pool(poolBuilder.build());
             }
+            if(SNIFFER_DIGGING.equals(id)) {
+                tableBuilder.modifyPools(itementry ->
+                        itementry.with((ItemEntry.builder(CrabsBackportBlocks.PALE_OAK_SAPLING)).build()));
+            }
         });
+
 
 
     }
