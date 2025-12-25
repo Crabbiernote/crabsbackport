@@ -101,6 +101,10 @@
   "block.crabsbackport.stripped_pale_oak_log": "Stripped Pale Oak Log",
   "block.crabsbackport.stripped_pale_oak_wood": "Stripped Pale Oak Wood",
 
+  "block.crabsbackport.pale_moss_block": "Pale Moss Block",
+    "block.crabsbackport.pale_moss_carpet": "Pale Moss Carpet",
+  "block.crabsbackport.pale_hanging_moss": "Pale Hanging Moss",
+
   "#crabsbackport:pale_oak_logs": "Pale Oak Logs",
 
   "sounds.crabsbackport.block.copper_door.open": "Door creaks",
